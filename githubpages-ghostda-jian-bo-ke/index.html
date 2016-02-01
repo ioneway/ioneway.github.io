@@ -50,45 +50,21 @@
     </script>
 
     <meta name="generator" content="Ghost 0.7">
-    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss.1">
 </head>
-<body class="post-template nav-closed">
+<body class="post-template  noimage">
 
-    <div class="nav">
-    <h3 class="nav-title">菜单</h3>
-    <a href="index.html#" class="nav-close">
-        <span class="hidden">关闭</span>
-    </a>
-    <ul>
-            <li class="nav-" role="presentation"><a href="../">首页</a></li>
-    </ul>
-    <a class="subscribe-button icon-feed" href="../rss/index.rss">订阅</a>
-</div>
-<span class="nav-cover"></span>
-
-    <div class="site-wrapper">
-
-        
+    
 
 
-<header class="main-header post-head no-cover">
-    <nav class="main-nav  clearfix">
-        
-            <a class="menu-button icon-menu" href="index.html#"><span class="word">菜单</span></a>
-    </nav>
-</header>
-
-<main class="content" role="main">
-    <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title">GitHubPages＋Ghost搭建博客</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="2016-01-30">2016年01月30日</time> 
-            </section>
+    <article role="main" class="">
+        <header>
+            <a href="../" id="home_link">«</a>
+            <div class="meta"><time datetime="2016-01-30"><a href="index.html">2016年01月30日</a></time> <span class="count" id="js-reading-time"></span></div>
+            <h1>GitHubPages＋Ghost搭建博客</h1>
         </header>
 
-        <section class="post-content">
+        <div class="text" id="js-post-content">
             <p><img src="../content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"></p>
 
 <p>对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。</p>
@@ -105,56 +81,139 @@
 <blockquote>
   <p>Ghost 的页面使用的是 <code>Handlebars.js</code> 前端模板引擎，页面总数在 10 个左右。页面采用<code>引入/调用</code>方式，就是把常规的 HTML 结构，譬如 <code>meta</code> 头信息、<code>header</code>、<code>footer</code> 等常用且可以复用的 HTML 页面结构，给独立成一个个模板文件，而在其他诸如<code>单篇博文页、博主个人主页</code>等页面模板文件内，引用上面的独立模板文件。譬如在单篇博文页内引入 meta 头信息模板文件，就可以达到一处编写，N 处调用的类似<code>变量调用/引入</code>的概念。<strong><em>前端模板引擎的出现，给前端开发人员缩短开发周期起到了不可或缺的作用。</em></strong>rggfgfgfgfgnnnn</p>
 </blockquote>
-        </section>
+        </div>
 
-        <footer class="post-footer">
+        <menu>
+            <a href="index.html" id="btn_share" class="btn" title="分享">
+                <span aria-hidden="true" data-icon="S"></span>
+                <strong>分享</strong>
+            </a>
+        </menu>
 
 
+        <footer class="post-footer" role="contentinfo">
 
-            <section class="author">
-                <h4><a href="../author/ioneway/">ioneway</a></h4>
+            <div class="vcard">
+                <a href="../rss.1" id="btn_feed" class="btn" title="Feed" target="_blank">
+                    <span aria-hidden="true" data-icon=")"></span>
+                    <strong>Feed</strong>
+                </a>
 
-                    <p>继续阅读此作者的<a href="../author/ioneway/">更多文章</a>。</p>
-                <div class="author-meta">
+
+                <div class="details">
+                    <h4><a href="../author/ioneway/" class="url n">ioneway</a></h4>
                     
                     
                 </div>
-            </section>
+            </div>
 
-
-            <section class="share">
-                <h4>分享此博文</h4>
-                <div class="bdsharebuttonbox"><a href="index.html#" class="bds_more" data-cmd="more"></a><a href="index.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="index.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="index.html#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="index.html#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-            </section>
+            <div id="user_bio">
+                <div class="inner">
+                    
+                </div>
+            </div>
 
         </footer>
 
     </article>
-</main>
 
-<aside class="read-next">
-    <a class="read-next-story prev no-cover" href="../aaaah/">
-        <section class="post">
-            <h2>aaaah</h2>
-            <p>sssasasas43443434asasasasasas fdfdfdfdfdfdfdf  fdfdfdfdfdfde   #include "std.h" .awesome-thing {     display: block;     width: 100%; }…</p>
-        </section>
-    </a>
-</aside>
+    <div id="share_modal">
+        <div class="wrap">
+            <div class="inner">
+                <header>
+                    分享
+                    <a href="index.html" class="close" title="Close">×</a>
+                </header>
 
-
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="../">iOneWay Blog</a> © 2016</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> &amp; <a href="http://www.ghostchina.com">GhostChina</a></section>
-        </footer>
-
+                <div class="roon-share-links">
+                <div class="bdsharebuttonbox"><a href="index.html#" class="bds_more" data-cmd="more"></a><a href="index.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="index.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="index.html#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="index.html#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="post_nav">
+        <nav role="navigation">
+                <a href="../aaaah/" id="post_prev" title="Previous Post">
+                    后一篇
+                    <span aria-hidden="true" data-icon="&gt;"></span>
+                </a>
+        </nav>
+    </div>
+
+
+
+
+
+    <script>
+
+            function get_text(el) {
+                ret = "";
+                var length = el.childNodes.length;
+                for(var i = 0; i < length; i++) {
+                    var node = el.childNodes[i];
+                    if(node.nodeType != 8) {
+                        ret += node.nodeType != 1 ? node.nodeValue : get_text(node);
+                    }
+                }
+                return ret;
+            }
+            function reading_time () {
+                var post_content = document.getElementById('js-post-content');
+                if (post_content) {
+                    var words = get_text(post_content),
+                        count = words.split(/\s+/).length,
+                        read_time = Math.ceil((count / 150)),
+                        read_time_node = document.createTextNode(read_time + ' min read');
+                    document.getElementById('js-reading-time').appendChild(read_time_node);
+                }
+            }
+
+        function no_schema_links () {
+            var links = document.querySelectorAll('.js-remove-domain-schema');
+            if (links) {
+                for (i = 0; i < links.length; ++i) {
+                    var link = links[i],
+                        text = link.innerHTML,
+                        no_schema = text.replace(/.*?:\/\//g, "");
+                    link.innerHTML = no_schema;
+                }
+            }
+        }
+
+        window.onload = function () {
+            no_schema_links();
+
+            reading_time();
+        }
+    </script>
 
     
 
-    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-    <script src="../assets/js/index.js?v=53c8cc0536"></script>
+        <script>
+            $(function(){
+                var share_modal = $("#share_modal"),
+                    update_social_links = true;
+
+                $("#btn_share").click(function(){
+                    var that = $(this);
+                    share_modal.fadeIn(200);
+                    return false;
+                });
+
+                share_modal.click(function(e){
+                    if (e.target.className == "wrap" || e.target.id == "share_modal") {
+                        share_modal.fadeOut(200);
+                    }
+                    return false;
+                });
+
+                share_modal.find("div.inner > header > a.close").click(function(){
+                    share_modal.fadeOut(200);
+                    return false;
+                });
+            });
+        </script>
 
 </body>
