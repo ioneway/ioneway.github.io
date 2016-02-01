@@ -1,10 +1,39 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 01 Feb 2016 11:02:27 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>2323232323</title><description>&lt;p&gt;fdfdfdfdfdfdfdfdfd&lt;/p&gt;</description><link>http://localhost:2368/2323232323/</link><guid isPermaLink="false">aadafcb5-0f3f-4541-8cc0-e3dbbe827b09</guid><dc:creator>ioneway</dc:creator><pubDate>Mon, 01 Feb 2016 11:02:15 GMT</pubDate><content:encoded>&lt;p&gt;fdfdfdfdfdfdfdfdfd&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">a0d90671-409d-4741-833a-1a14d5afb621</guid><category>Getting Started</category><dc:creator>ioneway</dc:creator><pubDate>Fri, 29 Jan 2016 07:54:50 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 01 Feb 2016 11:05:01 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost＋GithubPages 搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
-&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
-&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
+&lt;p&gt;首先就是要选择博客平台，经过一番对比，最终选GitHubPages，因为其免费专业，并且有着无数的同行在这里发表自己的见解。由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
 
-&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
+&lt;p&gt;OneVcat中使用的博客程序是Ghost，Ghost是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是 Ghost 搭建在 Node.js 环境上，轻量，快速，简洁。&lt;/p&gt;
+
+&lt;p&gt;所以我最终选择了Ghost，因为其高颜值和强大的后台管理。&lt;/p&gt;
+
+&lt;p&gt;Ghost 技术栈简要解析 &lt;br&gt;
+把 Ghost 的结构厘清，其实蛮简单，特别是使用官方已经编译好的 Ghost 压缩包解压后进行二次开发的话：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ghost 的页面使用的是 &lt;code&gt;Handlebars.js&lt;/code&gt; 前端模板引擎，页面总数在&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://localhost:2368/ghost-githubpages-da-jian-bo-ke/</link><guid isPermaLink="false">fa016e22-f7e6-4e13-bb18-3370e2f21862</guid><dc:creator>iOneWay</dc:creator><pubDate>Mon, 01 Feb 2016 10:37:34 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+
+&lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
+
+&lt;p&gt;首先就是要选择博客平台，经过一番对比，最终选GitHubPages，因为其免费专业，并且有着无数的同行在这里发表自己的见解。由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
+
+&lt;p&gt;OneVcat中使用的博客程序是Ghost，Ghost是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是 Ghost 搭建在 Node.js 环境上，轻量，快速，简洁。&lt;/p&gt;
+
+&lt;p&gt;所以我最终选择了Ghost，因为其高颜值和强大的后台管理。&lt;/p&gt;
+
+&lt;p&gt;Ghost 技术栈简要解析 &lt;br&gt;
+把 Ghost 的结构厘清，其实蛮简单，特别是使用官方已经编译好的 Ghost 压缩包解压后进行二次开发的话：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ghost 的页面使用的是 &lt;code&gt;Handlebars.js&lt;/code&gt; 前端模板引擎，页面总数在 10 个左右。页面采用&lt;code&gt;引入/调用&lt;/code&gt;方式，就是把常规的 HTML 结构，譬如 &lt;code&gt;meta&lt;/code&gt; 头信息、&lt;code&gt;header&lt;/code&gt;、&lt;code&gt;footer&lt;/code&gt; 等常用且可以复用的 HTML 页面结构，给独立成一个个模板文件，而在其他诸如&lt;code&gt;单篇博文页、博主个人主页&lt;/code&gt;等页面模板文件内，引用上面的独立模板文件。譬如在单篇博文页内引入 meta 头信息模板文件，就可以达到一处编写，N 处调用的类似&lt;code&gt;变量调用/引入&lt;/code&gt;的概念。&lt;strong&gt;&lt;em&gt;前端模板引擎的出现，给前端开发人员缩短开发周期起到了不可或缺的作用。&lt;/em&gt;&lt;/strong&gt;rggfgfgfgfgnnnn&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
+
+&lt;h2 id=""&gt;快速入门&lt;/h2&gt;
+
+&lt;p&gt;Ghost 使用 Markdown 语法书写内容。简单来说，Markdown 就是一种简化的书写格式！&lt;/p&gt;
+
+&lt;p&gt;用 Markdown 语法写作是很容易的。在编辑界面的左侧就是你写作的地方。在你认为需要的时候，可以使用以下这些语法来格式化你的内容。例如下面这个无序列表：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Item number one&lt;/li&gt;
@@ -13,7 +42,25 @@
 &lt;li&gt;A final item&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;or with numbers!&lt;/p&gt;
+&lt;p&gt;还可以是有序列表：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Remember to buy some milk&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">922bd620-1e31-4b9e-b00a-3816b4b5cee9</guid><category>系统简介</category><dc:creator>iOneWay</dc:creator><pubDate>Mon, 01 Feb 2016 10:29:59 GMT</pubDate><content:encoded>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
+
+&lt;h2 id=""&gt;快速入门&lt;/h2&gt;
+
+&lt;p&gt;Ghost 使用 Markdown 语法书写内容。简单来说，Markdown 就是一种简化的书写格式！&lt;/p&gt;
+
+&lt;p&gt;用 Markdown 语法写作是很容易的。在编辑界面的左侧就是你写作的地方。在你认为需要的时候，可以使用以下这些语法来格式化你的内容。例如下面这个无序列表：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Item number one&lt;/li&gt;
+&lt;li&gt;Item number two
+&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;A final item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;还可以是有序列表：&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Remember to buy some milk  &lt;/li&gt;
@@ -21,29 +68,29 @@
 &lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+&lt;h3 id=""&gt;链接&lt;/h3&gt;
 
-&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
+&lt;p&gt;如果要链接其它页面，可以直接把页面的 URL 粘贴过来，例如 &lt;a href="http://www.ghostchina.com"&gt;http://www.ghostchina.com&lt;/a&gt; - 会被自动识别为链接。但是，如果你想自定义链接文本，可以像这样： &lt;a href="http://www.ghostchina.com"&gt;Ghost 中文网&lt;/a&gt;。很简单吧！&lt;/p&gt;
 
-&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
+&lt;h3 id=""&gt;图片&lt;/h3&gt;
 
-&lt;p&gt;Images work too! Already know the URL of the i   mage you want to include in your article? Simply  paste it in like this to make it show up:&lt;/p&gt;
+&lt;p&gt;插入图片也没问题！前提是你事先知道图片的 URL，然后像下面这样：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://static.ghostchina.com/image/3/fe/34a9831916be9db1381ecb320491e.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
-&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and d rag and d   rop the image in to upload:&lt;/p&gt;
+&lt;p&gt;如果图片在本地的硬盘里怎么办？也很简单！像下面这样书写就能为图片预留一个位置，然后你可以继续写作，回头再通过拖拽的方式把图片上传到服务器上。&lt;/p&gt;
 
-&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
+&lt;h3 id=""&gt;引用&lt;/h3&gt;
 
-&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!&lt;/p&gt;
+&lt;p&gt;有些时候我们需要引用别人说的话，可以这样：&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Ghost - Just a blogging platform&lt;/p&gt;
+  &lt;p&gt;Wisdomous - it's definitely a word.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
+&lt;h3 id=""&gt;代码&lt;/h3&gt;
 
-&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.&lt;/p&gt;
+&lt;p&gt;或许你是个码农，需要贴一些代码到文章里，可以通过两个引号（Tab 键上面的那个键）加入行内代码 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;。如果需要加入大段的代码，可以在代码前加 4 个空格缩进，这就是 Markdown 的语法。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.awesome-thing {
     display: block;
@@ -51,16 +98,16 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
+&lt;h3 id=""&gt;分割线&lt;/h3&gt;
 
-&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
+&lt;p&gt;在任一新行输入 3 个或更多的短横线（减号）就是一条分隔线了。&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
+&lt;h3 id=""&gt;高级用法&lt;/h3&gt;
 
-&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
+&lt;p&gt;Markdown 还有一个特别用法，就是在你需要的时候可以直接书写 HTML 代码。&lt;/p&gt;
 
-&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type="text" placeholder="这是个输入框！"&gt;&lt;/p&gt;
 
-&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;只要掌握了上面的这些介绍，你就已经入门了！继续写作吧！&lt;/p&gt;</content:encoded></item></channel></rss>
