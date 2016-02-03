@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 03 Feb 2016 09:54:40 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>kkkkkk</title><description>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 03 Feb 2016 09:56:21 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>kkkkkk</title><description>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
 hhjhjjhhj&lt;/p&gt;</description><link>http://localhost:2368/kkkkkk/</link><guid isPermaLink="false">4097b7ae-048c-437b-b642-1bd3ad9db3e2</guid><dc:creator>ioneway</dc:creator><pubDate>Mon, 01 Feb 2016 12:42:49 GMT</pubDate><content:encoded>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
 hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
@@ -24,7 +24,7 @@ hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭�
 
 &lt;p&gt;由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
 
-&lt;p&gt;OneVcat中使用的博客程序是Ghost，Ghost是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是&lt;/p&gt;</description><link>http://localhost:2368/githubpages-ghostda-jian-bo-ke/</link><guid isPermaLink="false">cc9b5426-38d8-41e8-8022-8b289e963f66</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 30 Jan 2016 09:28:09 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+&lt;p&gt;OneVcat中使用的博客程序是&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。&lt;/p&gt;</description><link>http://localhost:2368/githubpages-ghostda-jian-bo-ke/</link><guid isPermaLink="false">cc9b5426-38d8-41e8-8022-8b289e963f66</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 30 Jan 2016 09:28:09 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -48,12 +48,12 @@ hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭�
 
 &lt;p&gt;由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
 
-&lt;p&gt;OneVcat中使用的博客程序是Ghost，Ghost是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是 Ghost 搭建在 Node.js 环境上，轻量，快速，简洁。&lt;/p&gt;
+&lt;p&gt;OneVcat中使用的博客程序是&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是 Ghost 搭建在 Node.js 环境上，轻量，快速，简洁。&lt;/p&gt;
 
 &lt;p&gt;所以我最终选择了&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，因为其高颜值和强大的后台管理,另外还有一个原因就是它还有&lt;a href="http://www.ghostchina.com"&gt;中文版Ghost&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Ghost 技术栈简要解析 &lt;br&gt;
-把 Ghost 的结构厘清，其实蛮简单，特别是使用官方已经编译好的 Ghost 压缩包解压后进行二次开发的话：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt; 技术栈简要解析
+把 &lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt; 的结构厘清，其实蛮简单，特别是使用官方已经编译好的 &lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt; 压缩包解压后进行二次开发的话：&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Ghost 的页面使用的是 &lt;code&gt;Handlebars.js&lt;/code&gt; 前端模板引擎，页面总数在 10 个左右。页面采用&lt;code&gt;引入/调用&lt;/code&gt;方式，就是把常规的 HTML 结构，譬如 &lt;code&gt;meta&lt;/code&gt; 头信息、&lt;code&gt;header&lt;/code&gt;、&lt;code&gt;footer&lt;/code&gt; 等常用且可以复用的 HTML 页面结构，给独立成一个个模板文件，而在其他诸如&lt;code&gt;单篇博文页、博主个人主页&lt;/code&gt;等页面模板文件内，引用上面的独立模板文件。譬如在单篇博文页内引入 meta 头信息模板文件，就可以达到一处编写,处处调用的类似&lt;code&gt;变量调用/引入&lt;/code&gt;的概念。&lt;strong&gt;前端模板引擎的出现，给前端开发人员缩短开发周期起到了不可或缺的作用&lt;/strong&gt; 。&lt;/p&gt;
