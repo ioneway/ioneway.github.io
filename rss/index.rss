@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 03 Feb 2016 09:56:21 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>kkkkkk</title><description>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 13 Feb 2016 15:34:28 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>kkkkkk</title><description>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
 hhjhjjhhj&lt;/p&gt;</description><link>http://localhost:2368/kkkkkk/</link><guid isPermaLink="false">4097b7ae-048c-437b-b642-1bd3ad9db3e2</guid><dc:creator>ioneway</dc:creator><pubDate>Mon, 01 Feb 2016 12:42:49 GMT</pubDate><content:encoded>&lt;p&gt;jkjljjlj i dhuhhohhi &lt;br&gt;
 hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
@@ -22,9 +22,9 @@ hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭�
 &lt;li&gt;动态性不好，没有评论系统，不过可以自己配置&lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt; 扩展。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
+&lt;p&gt;由于GitHub Pages对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题:&lt;a href="https://github.com/onevcat/vno"&gt;vno&lt;/a&gt;正是我所想要的那种。&lt;/p&gt;
 
-&lt;p&gt;OneVcat中使用的博客程序是&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。&lt;/p&gt;</description><link>http://localhost:2368/githubpages-ghostda-jian-bo-ke/</link><guid isPermaLink="false">cc9b5426-38d8-41e8-8022-8b289e963f66</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 30 Jan 2016 09:28:09 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+&lt;p&gt;OneVcat中使用的博客程序是&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;是一种轻量级的动态博客，&lt;/p&gt;</description><link>http://localhost:2368/githubpages-ghostda-jian-bo-ke/</link><guid isPermaLink="false">cc9b5426-38d8-41e8-8022-8b289e963f66</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 30 Jan 2016 09:28:09 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -46,7 +46,7 @@ hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭�
 &lt;li&gt;动态性不好，没有评论系统，不过可以自己配置&lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt; 扩展。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;由于GitHubPages只支持静态博客，并且对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题正是我所想要的那种。&lt;/p&gt;
+&lt;p&gt;由于GitHub Pages对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘cat的博客主题:&lt;a href="https://github.com/onevcat/vno"&gt;vno&lt;/a&gt;正是我所想要的那种。&lt;/p&gt;
 
 &lt;p&gt;OneVcat中使用的博客程序是&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;，&lt;a href="https://blog.ghost.org"&gt;Ghost&lt;/a&gt;是一种轻量级的动态博客，有一个管理后台，可以直接写作和管理博客。本质上和WordPress是相通的，只是 Ghost 搭建在 Node.js 环境上，轻量，快速，简洁。&lt;/p&gt;
 
@@ -57,7 +57,112 @@ hhjhjjhhj&lt;/p&gt;</content:encoded></item><item><title>GitHubPages＋Ghost搭�
 
 &lt;blockquote&gt;
   &lt;p&gt;Ghost 的页面使用的是 &lt;code&gt;Handlebars.js&lt;/code&gt; 前端模板引擎，页面总数在 10 个左右。页面采用&lt;code&gt;引入/调用&lt;/code&gt;方式，就是把常规的 HTML 结构，譬如 &lt;code&gt;meta&lt;/code&gt; 头信息、&lt;code&gt;header&lt;/code&gt;、&lt;code&gt;footer&lt;/code&gt; 等常用且可以复用的 HTML 页面结构，给独立成一个个模板文件，而在其他诸如&lt;code&gt;单篇博文页、博主个人主页&lt;/code&gt;等页面模板文件内，引用上面的独立模板文件。譬如在单篇博文页内引入 meta 头信息模板文件，就可以达到一处编写,处处调用的类似&lt;code&gt;变量调用/引入&lt;/code&gt;的概念。&lt;strong&gt;前端模板引擎的出现，给前端开发人员缩短开发周期起到了不可或缺的作用&lt;/strong&gt; 。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;由于GitHub Pages只支持静态博客，而Ghost却是动态的。所谓动态博客，需要服务器来支持数据输出。而静态页面，就是诸如&lt;code&gt;HTML&lt;/code&gt;,&lt;code&gt;XML&lt;/code&gt;等标记语言写好结构，用&lt;code&gt;css&lt;/code&gt;描述好表现样式，用&lt;code&gt;JavaScript&lt;/code&gt;写好了交互逻辑的，理论上不再接受后端服务器数据输出而动态修改的页面。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;简而言之，静态页面是死的，动态页面是活的。&lt;/em&gt;&lt;/strong&gt;对于Github Pages这样仅仅支持静态网站/页面的托管服务而言，怎么搞定Ghost的托管呢？&lt;/p&gt;
+
+&lt;h3 id="buster"&gt;&lt;strong&gt;开源项目&lt;code&gt;Buster&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Buster是&lt;code&gt;Python&lt;/code&gt;语言写的一个&lt;strong&gt;文件路径遍历器&lt;/strong&gt;。通过调用&lt;code&gt;Wget&lt;/code&gt;把Ghost中用到的图片，字体，CSS，javaScript等静态资源统一复制到一个新的文件夹(同时此文件夹可以作为Github Pages的仓库)，然后相应地修改HTML文件内引用的静态文件的路径，使之最终生效。Buster由Misiur提供：&lt;a href="https://github.com/Misiur/buster"&gt;https://github.com/Misiur/buster&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;准备工作&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1, &lt;a href="https://nodejs.org/en/download/releases"&gt;Node.js&lt;/a&gt;：Ghost依赖Node.js。 建议安装v0.12.6版本。&lt;/p&gt;
+  
+  &lt;p&gt;2, &lt;a href="http://git-scm.com/download"&gt;Git&lt;/a&gt;: 用于克隆项目到本地，部署、提交项目到 Github。Mac OSX 自带。&lt;/p&gt;
+  
+  &lt;p&gt;3, &lt;a href="https://www.python.org/downloads/"&gt;Python&lt;/a&gt;：用于执行Buster工具，Mac OSX自带。&lt;/p&gt;
+  
+  &lt;p&gt;4, &lt;a href="https://github.com/pypa/pip"&gt;pip&lt;/a&gt;: Python包管理工具，用于安装Buster工具。&lt;/p&gt;
+  
+  &lt;p&gt;5, &lt;a href="https://github.com/Misiur/buster"&gt;Buster&lt;/a&gt;: 用于将Ghost动态页面转换为静态页面。&lt;/p&gt;
+  
+  &lt;p&gt;6, &lt;a href="https://github.com/diancloud/Ghost"&gt;Ghost中文版&lt;/a&gt;：建议安装中文版，因为中文版已经包含了所有需要的插件。&lt;/p&gt;
+  
+  &lt;p&gt;7, &lt;a href="https://github.com/onevcat/vno"&gt;vno&lt;/a&gt;：一款简洁高端大气的ghost博客主题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;具体步骤&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1，搭建环境&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装node.js，建议v0.12.6版本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;brew update  
+brew install nvm //安装nvm  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;并在(~/.bashrc, ~/.profile, or ~/.zshrc)中添加如下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#For NVM
+export NVM_DIR=~/.nvm  
+source $(brew --prefix nvm)/nvm.sh  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;用nvm安装node.js &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nvm install v0.12.6  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入用户Documents目录,并新建文件夹：GithubPages_ZH.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-Shell"&gt;cd ~/Documents &amp;amp;&amp;amp; mkdir GithubPages_ZH  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入GithubPages_ZH目录，并下载&lt;a href="https://github.com/diancloud/Ghost"&gt;Ghost中文版&lt;/a&gt;，并将其命名为Ghost。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;cd GithubPages_ZH  
+git clone https://github.com/diancloud/Ghost.git  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入GithubPages_ZH/Ghost/content/themes/, 然后下载&lt;a href="https://github.com/onevcat/vno"&gt;vno&lt;/a&gt;主题.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;cd Ghost/content/themes/  
+git clone https://github.com/onevcat/vno.git  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入GithubPages_ZH/Ghost 启动Ghost服务&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;nvm use default 0.12.6  
+npm start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;浏览器打开:&lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;进入后台管理页面。注册一个管理员帐号，并记住帐号密码。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设置主题
+点击左侧栏“全局设置”按钮，进入设置页面，下滑到最下方，主题：选择vno主题，并保存。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装Buster: 执行以下命令&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install git+https://github.com/Misiur/buster  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;登陆Github 创建仓库，仓库名称&lt;code&gt;必须是&lt;/code&gt;：&lt;code&gt;[your－username].github.io&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;终端执行以下命令：&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/GithubPages_ZH  
+Buster setup -gh-repo=\  
+"https://github.com/&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git"
+//这里会要求输入github帐号密码。
+buster generate //产生静态文件，此时会在当前文件夹下产生static文件夹。  
+buster deploy  //发布  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
 
 &lt;h2 id=""&gt;快速入门&lt;/h2&gt;
 
