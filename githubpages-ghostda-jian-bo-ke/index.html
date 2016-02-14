@@ -38,7 +38,7 @@
     <meta property="og:description" content="对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。 首先就是要选择博客平台，经过一番对比，最终选GitHub Pages，因为其免费且专业，并且还有以下优点： 简易的配置，轻量级别系统，不需要数据库 支持标记语言，如Markdown 使用GitHub托管服务，免费300MB空间 可以绑定自己的域名 支持CDN，提升访问速度 当然GitHub Pages也有一些缺陷： 使用Jekyll 模板系统，属于静态页面 基于Git操作，需要有一定的动手能力 动态性不好，没有评论系统，不过可以自己配置Disqus 扩展。 由于GitHub Pages对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘...">
     <meta property="og:url" content="http://localhost:2368/githubpages-ghostda-jian-bo-ke/">
     <meta property="article:published_time" content="2016-01-30T09:28:09.334Z">
-    <meta property="article:modified_time" content="2016-02-14T01:15:30.997Z">
+    <meta property="article:modified_time" content="2016-02-14T04:08:50.375Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="GitHubPages＋Ghost搭建博客">
@@ -61,7 +61,7 @@
     "headline": "GitHubPages＋Ghost搭建博客",
     "url": "http://localhost:2368/githubpages-ghostda-jian-bo-ke/",
     "datePublished": "2016-01-30T09:28:09.334Z",
-    "dateModified": "2016-02-14T01:15:30.997Z",
+    "dateModified": "2016-02-14T04:08:50.375Z",
     "description": "对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。 首先就是要选择博客平台，经过一番对比，最终选GitHub Pages，因为其免费且专业，并且还有以下优点： 简易的配置，轻量级别系统，不需要数据库 支持标记语言，如Markdown 使用GitHub托管服务，免费300MB空间 可以绑定自己的域名 支持CDN，提升访问速度 当然GitHub Pages也有一些缺陷： 使用Jekyll 模板系统，属于静态页面 基于Git操作，需要有一定的动手能力 动态性不好，没有评论系统，不过可以自己配置Disqus 扩展。 由于GitHub Pages对Jekyll无缝支持。可是我在Jekyll主题市场里找了许久，没能找到我想要的那种看上去简洁，高端，并且适合程序员写技术博客的主题。于是就去借鉴大神们的选择，发现OneV‘..."
 }
     </script>
@@ -314,10 +314,18 @@ npm start
 </ul>
 
 <pre><code>cd ~/GithubPages_ZH  
-Buster setup -gh-repo=\  
+buster setup -gh-repo=\  
 "https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git"
 //这里会要求输入github帐号密码。
 buster generate //产生静态文件，此时会在当前文件夹下产生static文件夹。  
+buster deploy  //发布  
+</code></pre>
+
+<p>至此，Ghost博客搭建完成。之后每次跟新博客时：需要点击编辑窗口右上方的更新按钮，然后终端执行以下命令：</p>
+
+<pre><code>//在GithubPages_ZH下执行
+//不需要再次执行Buster setup 命令
+buster generate  
 buster deploy  //发布  
 </code></pre>
     </section>
