@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 05:32:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 05:33:55 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -211,9 +211,10 @@ config.codekit
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;你需要根据自己的实际情况对主题中各个按钮的点击链接以及图片进行设置，具体请参考链接：&lt;a href="https://github.com/onevcat/vno"&gt;https://github.com/onevcat/vno&lt;/a&gt;
-至此，Ghost博客搭建完成。之后每次跟新博客时：需要点击编辑窗口右上方的更新按钮，然后终端执行以下命令：&lt;/li&gt;
+&lt;li&gt;你需要根据自己的实际情况对主题中各个按钮的点击链接以及图片进行设置，具体请参考链接：&lt;a href="https://github.com/onevcat/vno"&gt;https://github.com/onevcat/vno&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;至此，Ghost博客搭建完成。之后每次跟新博客时：需要点击编辑窗口右上方的更新按钮，然后终端执行以下命令：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;//在GithubPages_ZH下执行
 //不需要再次执行Buster setup 命令
