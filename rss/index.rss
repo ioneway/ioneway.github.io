@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 01:07:11 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 01:15:38 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -68,7 +68,7 @@
 &lt;h3 id=""&gt;&lt;strong&gt;准备工作&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;1, &lt;a href="https://nodejs.org/en/download/releases"&gt;Node.js&lt;/a&gt;：Ghost依赖Node.js。 建议安装v0.12.6版本。&lt;/p&gt;
+  &lt;p&gt;1, &lt;a href="https://nodejs.org/en/download/releases"&gt;Node.js&lt;/a&gt;：Ghost依赖Node.js。 建议安装v0.10.26版本。&lt;/p&gt;
   
   &lt;p&gt;2, &lt;a href="http://git-scm.com/download"&gt;Git&lt;/a&gt;: 用于克隆项目到本地，部署、提交项目到 Github。Mac OSX 自带。&lt;/p&gt;
   
@@ -88,7 +88,7 @@
 &lt;p&gt;&lt;strong&gt;1，搭建环境&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;安装node.js，建议v0.12.6版本&lt;/li&gt;
+&lt;li&gt;安装node.js，建议v0.10.6版本&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;brew update  
@@ -104,7 +104,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 &lt;p&gt;用nvm安装node.js &lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nvm install v0.12.6  
+&lt;pre&gt;&lt;code&gt;nvm install v0.10.6  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -134,7 +134,7 @@ git clone https://github.com/onevcat/vno.git
 &lt;li&gt;进入GithubPages_ZH/Ghost 启动Ghost服务&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;nvm use default 0.12.6  
+&lt;pre&gt;&lt;code&gt;nvm use default 0.10.6  
 npm start  
 &lt;/code&gt;&lt;/pre&gt;
 

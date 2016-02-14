@@ -21,16 +21,16 @@
     <meta name="apple-mobile-web-app-title" content="Ghost" />
 
     <link rel="shortcut icon" href="http://localhost:2368/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="http://localhost:2368/ghost/img/touch-icon-iphone.png?v=30542f4f90" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:2368/ghost/img/touch-icon-ipad.png?v=30542f4f90" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:2368/ghost/img/small.png?v=30542f4f90" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:2368/ghost/img/medium.png?v=30542f4f90" />
+    <link rel="apple-touch-icon-precomposed" href="http://localhost:2368/ghost/img/touch-icon-iphone.png?v=ca0ca57261" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:2368/ghost/img/touch-icon-ipad.png?v=ca0ca57261" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:2368/ghost/img/small.png?v=ca0ca57261" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:2368/ghost/img/medium.png?v=ca0ca57261" />
 
     <meta name="application-name" content="Ghost" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-square70x70logo" content="/ghost/img/small.png?v=30542f4f90" />
-    <meta name="msapplication-square150x150logo" content="/ghost/img/medium.png?v=30542f4f90" />
-    <meta name="msapplication-square310x310logo" content="/ghost/img/large.png?v=30542f4f90" />
+    <meta name="msapplication-square70x70logo" content="/ghost/img/small.png?v=ca0ca57261" />
+    <meta name="msapplication-square150x150logo" content="/ghost/img/medium.png?v=ca0ca57261" />
+    <meta name="msapplication-square310x310logo" content="/ghost/img/large.png?v=ca0ca57261" />
 
         <meta name="env-fileStorage" content="true" />
         <meta name="env-publicAPI" content="false" />
@@ -44,8 +44,8 @@
 
         
 
-    <link rel="stylesheet" href="http://localhost:2368/ghost/vendor.css?v=30542f4f90" />
-    <link rel="stylesheet" href="http://localhost:2368/ghost/ghost.css?v=30542f4f90" />
+    <link rel="stylesheet" href="http://localhost:2368/ghost/vendor.css?v=ca0ca57261" />
+    <link rel="stylesheet" href="http://localhost:2368/ghost/ghost.css?v=ca0ca57261" />
 
     
 </head>
@@ -54,7 +54,7 @@
 
 
 
-<script src="http://localhost:2368/ghost/vendor.js?v=30542f4f90"></script>
-<script src="http://localhost:2368/ghost/ghost.js?v=30542f4f90"></script>
+<script src="http://localhost:2368/ghost/vendor.js?v=ca0ca57261"></script>
+<script src="http://localhost:2368/ghost/ghost.js?v=ca0ca57261"></script>
 </body>
 </html>
