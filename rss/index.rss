@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 13 Feb 2016 15:38:44 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 01:05:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -141,9 +141,17 @@ npm start
 &lt;p&gt;浏览器打开:&lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;进入后台管理页面。注册一个管理员帐号，并记住帐号密码。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;设置主题
-点击左侧栏“全局设置”按钮，进入设置页面，下滑到最下方，主题：选择vno主题，并保存。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装Buster: 执行以下命令&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;设置主题
+点击左侧栏“全局设置”按钮，进入设置页面，下滑到最下方，主题：选择vno主题，并保存。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*安装pip:Python包管理工具&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo easy_install pip  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装Buster: 执行以下命令&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;pip install git+https://github.com/Misiur/buster  
