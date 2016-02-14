@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 04:09:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 14 Feb 2016 05:23:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GitHubPages＋Ghost搭建博客</title><description>&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/headImg-3.jpg" alt="The Ghost Logo"&gt;&lt;/p&gt;
 
 &lt;p&gt;对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。&lt;/p&gt;
 
@@ -169,13 +169,116 @@ buster generate //产生静态文件，此时会在当前文件夹下产生stati
 buster deploy  //发布  
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;ul&gt;
+&lt;li&gt;在static文件夹下添加文件：.gitignore文件，用于在提交github时忽略部分文件。在.gitignore中添加如下内容：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;# vim ~tmp files
+*.swp
+*.un~
+
+# ignore bourbon install so that it is the latest build
+# for developers that need it
+assets/scss/bourbon/*
+
+# ignore the sass-cache/
+.sass-cache/*
+**/.sass-cache/*
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder  
+Temporary Items  
+.apdisk
+config.codekit  
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;至此，Ghost博客搭建完成。之后每次跟新博客时：需要点击编辑窗口右上方的更新按钮，然后终端执行以下命令：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;//在GithubPages_ZH下执行
 //不需要再次执行Buster setup 命令
 buster generate  
 buster deploy  //发布  
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="ghost"&gt;Ghost 相关资源推荐&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;各种 Ghost 主题：&lt;a href="http://www.allghostthemes.com"&gt;http://www.allghostthemes.com&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;官方主题市场：&lt;a href="http://marketplace.ghost.org"&gt;http://marketplace.ghost.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id="ghost"&gt;&lt;strong&gt;Ghost高级设置&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;添加评论系统&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;注册&lt;a href="http://duoshuo.com"&gt;多说&lt;/a&gt;帐号,点击“安装”按钮并填写相关设置;  &lt;/li&gt;
+&lt;li&gt;复制稳定版通用代码，黏贴在：&lt;code&gt;Ghost/content/themes/casper/post.hbs&lt;/code&gt;模板文件的 ｀｀&lt;code&gt;{{/post}}&lt;/code&gt; 标签前，并保存。 &lt;br&gt;
+如图：
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-22-43.png" alt="duoshuo_code"&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;注意&lt;/code&gt;将其中中文字符分别替换为：&lt;code&gt;{{id}}&lt;/code&gt;， &lt;code&gt;{{title}}&lt;/code&gt;，&lt;code&gt;ioneway.github.io{{url}}&lt;/code&gt;. 其中&lt;code&gt;ioneway.github.io&lt;/code&gt;替换为你的域名。
+  
+  最终粘贴的代码如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 多说评论框 start --&amp;gt;  
+    &amp;lt;div class="ds-thread" data-thread-key="{{id}}" data-title="{{title}}" data-url="ioneway.github.io{{url}}"&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- 多说评论框 end --&amp;gt;  
+&amp;lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&amp;gt;  
+&amp;lt;script type="text/javascript"&amp;gt;  
+var duoshuoQuery = {short_name:"abcbytr"};  
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    &amp;lt;/script&amp;gt;
+&amp;lt;!-- 多说公共JS代码 end --&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;登陆多说，进入设置页面，基本设置。正确填写以下两项：首页网址：&lt;a href="http://ioneway.github.io"&gt;http://ioneway.github.io&lt;/a&gt;
+，首选域名：选择最后一项：“将网址显示为ioneway.github.io”。保存。&lt;/p&gt;
+
+&lt;p&gt;如图：
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-41-14.png" alt="duoshuo_setting"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2，添加 CNZZ 统计&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1， 注册&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt; &lt;br&gt;
+2， 登陆&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt; &lt;code&gt;站点设置&lt;/code&gt;, &lt;code&gt;获取代码&lt;/code&gt; 选择其中一种，并复制代码 &lt;br&gt;
+如图：
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-54-11.png" alt="duoshuo_setting"&gt;&lt;/p&gt;
+
+&lt;p&gt;3， 终端输入命令&lt;code&gt;npm start&lt;/code&gt;开启服务 &lt;br&gt;
+4， 浏览器输入&lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;进入后台管理。 &lt;br&gt;
+5. 点击左侧边栏：&lt;code&gt;插入代码&lt;/code&gt;，将复制的代码粘贴在&lt;code&gt;页脚&lt;/code&gt;框中，保存。&lt;/p&gt;
+
+&lt;p&gt;至此，你的博客就有了评论功能，并且你也可以登录&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt;查看浏览数据并管理你的站点。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;如有遗漏，欢迎指正。谢谢。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
 
 &lt;h2 id=""&gt;快速入门&lt;/h2&gt;
 
