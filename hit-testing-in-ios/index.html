@@ -1,0 +1,383 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Hit-Testing in iOS</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hit-Testing in iOS">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hit-Testing in iOS">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=c7c2ea34c8">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=c7c2ea34c8">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hit-Testing in iOS">
+    <meta property="og:description" content='Hit-testing翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过反向前序深度优先算法来便利视图的层次结构，从而实现上述功能。 在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。 如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。   注意：不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。 hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。   注意：需要了解的是，手指被移动到了hit-test...'>
+    <meta property="og:url" content="http://localhost:2368/hit-testing-in-ios/">
+    <meta property="article:published_time" content="2016-02-16T06:29:52.378Z">
+    <meta property="article:modified_time" content="2016-02-16T11:06:33.023Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hit-Testing in iOS">
+    <meta name="twitter:description" content='Hit-testing翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过反向前序深度优先算法来便利视图的层次结构，从而实现上述功能。 在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。 如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。   注意：不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。 hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。   注意：需要了解的是，手指被移动到了hit-test...'>
+    <meta name="twitter:url" content="http://localhost:2368/hit-testing-in-ios/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Hit-Testing in iOS",
+    "url": "http://localhost:2368/hit-testing-in-ios/",
+    "datePublished": "2016-02-16T06:29:52.378Z",
+    "dateModified": "2016-02-16T11:06:33.023Z",
+    "description": "Hit-testing翻译为中文是&quot;命中测试&quot;，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过反向前序深度优先算法来便利视图的层次结构，从而实现上述功能。 在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。 如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。   注意：不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。 hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。   注意：需要了解的是，手指被移动到了hit-test..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="16 2月 2016" class="post-meta__date date">16 2月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">Hit-Testing in iOS</h1>
+    </header>
+
+    <section class="post">
+      <p><code>Hit-testing</code>翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为<code>hit-test view</code>。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过<code>反向前序深度优先</code>算法来便利视图的层次结构，从而实现上述功能。</p>
+
+<p>在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。</p>
+
+<p><img src="../content/images/2016/02/hit-test-touch-event-flow.png" alt="hit-test-touch-event-flow"></p>
+
+<p>如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。</p>
+
+<blockquote>
+  <p><code>注意：</code>不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。</p>
+</blockquote>
+
+<p>hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。</p>
+
+<blockquote>
+  <p><code>注意：</code>需要了解的是，手指被移动到了hit-test view外，而移动到了另一个view内时，hit-test视图依旧会<code>接收整个</code>touch事件的序列。</p>
+</blockquote>
+
+<p> </p>
+
+<blockquote>
+  <p>   “The touch object is associated with its hit-test view for its lifetime, even if the touch later moves outside the view.”<br>
+                                            
+  <a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/event_delivery_responder_chain/event_delivery_responder_chain.html#//apple_ref/doc/uid/TP40009541-CH4-SW4">Event Handling Guide for iOS, iOS Developer Library</a></p>
+</blockquote>
+
+<p>如前所述，命中测试采用反向预定深度优先遍历（先访问根结点，然后遍历其子树由高到低的指标）。这种遍历可以减少遍历迭代次数，并在搜索到第一个包含touch-point的最深的子视图中停止搜索过程。这可能是因为一个视图总是在它的父视图之前渲染，而兄弟视图总是比在subviews具有较低索引的兄弟视图先渲染。这样，多个重叠的视图都包含一个touch-point时，在右子树的最深的视图是第一个被渲染的。</p>
+
+<blockquote>
+  <p>“Visually, the content of a subview obscures all or part of the content of its parent view. Each superview stores its subviews in an ordered array and the order in that array also affects the visibility of each subview. If two sibling subviews overlap each other, the one that was added last (or was moved to the end of the subview array) appears on top of the other.”<br>
+                                            <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html#//apple_ref/doc/uid/TP40009503-CH2-SW24">View Programming Guide for iOS, iOS Developer Library</a></p>
+</blockquote>
+
+<p>下图显示了一个视图层次树及其匹配的用户界面。从左到右树枝序列影响着subviews的数组顺序。</p>
+
+<p><img src="../content/images/2016/02/hit-test-view-hierarchy.png" alt="hit-test-view-hierarchy"></p>
+
+<p>图中可以看到，“VIewA”和“ViewB”和它们的子视图，“ViewA.2”和“View B.1”有重叠。但是“ViewB”在subViews中的索引值高于“ViewA”，“ViewB”和它的子视图会展现在“View A”和它的子视图之上。 因此，用户手指触摸 “View.b.1”与”View.A.2”重叠区域时，hit-testing返回“View.B.1”。</p>
+
+<p>通过应用深度优先反向前序遍历算法，各个视图的遍历路径如图：</p>
+
+<p><img src="../content/images/2016/02/hit-test-depth-first-traversal.png" alt="hit-test-depth-first-traversal"></p>
+
+<p>遍历算法先发送hitTest:withEvent: 到UIWindow，UIWindow是视图层次结构的根视图。此方法返回的值是包含了触摸点的最靠前面的视图。<br></p>
+
+<p>下面的流程图说明了命中测试逻辑。</p>
+
+<p><img src="../content/images/2016/02/hit-test-flowchart.png" alt="hit-test-flowchart"></p>
+
+<p>以下代码是<code>hitTest:withEvent:</code>可能的实现：</p>
+
+<pre><code>- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha &lt;= 0.01) {
+        return nil;
+    }
+    if ([self pointInside:point withEvent:event]) {
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                return hitTestView;
+            }
+        }
+        return self;
+    }
+    return nil;
+}
+</code></pre>
+
+<p><code>hitTest:withEvent:</code>方法首先检查视图是否允许接收touch事件。如果一个View允许接收touch事件，则必须满足以下所有条件：</p>
+
+<ol>
+<li><code>self.hidden == NO</code>  </li>
+<li><code>self. self.userInteractionEnabled = YES</code>  </li>
+<li><code>self.alpha &gt; 0.1</code>  </li>
+<li><code>pointInside:withEvent: == YES</code></li>
+</ol>
+
+<p>当视图View允许接收touch事件时，该方法就会反向枚举它的子视图，然后逐个发送<code>hitTest:withEvent:</code>消息，直到有一个子视图返回了nil。第一个返回非nil值的子视图就是这些子视图中最靠前且在touch-point下的视图。如果所有视图都返回nil或者该视图没有子视图则函数返回self.</p>
+
+<p>如果视图View不允许接收touch事件，该方法返回nil,而不需要在反向枚举。因此，hit-testing并不需要访问视图层次树上的所有视图。</p>
+
+<h4 id="hittestwithevent">hitTest:withEvent:运用场景</h4>
+
+<p>hitTest:withEvent:可以被覆盖，当所有触摸事件阶段的所有阶段的触摸事件想要被一个视图处理重定向到另外一个视图。</p>
+
+<blockquote>
+  <p><em>*注意: *</em>因为hit-test仅仅在触摸事件顺序的第一次触摸事件（UITouchPhaseBegan phase(阶段)的触摸事件）发送给他的接收者之前，覆盖hitTest:withEvent:来重定向事件将会重定向所有phase的触摸事件。</p>
+</blockquote>
+
+<p><strong>1.增加视图区域</strong></p>
+
+<p>覆盖<code>hitTest:withEvent:</code>方法的一个用途就是，当一个视图的触摸区域应该大于他的边界的时候。例如下面的插图显示了一个大小为20*20的视图。这个大小对于处理附近的触摸来说太小了。因此，他的触摸区域可以通过覆盖<code>hitTest:withEvent:</code>在每个方向增加10。</p>
+
+<p><img src="../content/images/2016/02/hit-test-increase-touch-area.png" alt="hit-test-increase-touch-area"></p>
+
+<pre><code>- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha &lt;= 0.01) {
+        return nil;
+    }
+    CGRect touchRect = CGRectInset(self.bounds, -10, -10);
+    if (CGRectContainsPoint(touchRect, point)) {
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                return hitTestView;
+            }
+        }
+        return self;
+    }
+    return nil;
+}
+</code></pre>
+
+<blockquote>
+  <p><strong>注意：</strong>为了能够正确的调用<code>hit-test</code>，父视图的边界应该包含子视图希望触摸的区域，或者他的<code>hitTest:withEvent:</code>方法也应该被覆盖来包含期望的触摸区域。</p>
+</blockquote>
+
+<p><strong>2.传递触摸事件给下面的视图</strong></p>
+
+<p>有的时候对于一个视图忽略触摸事件并传递给下面的视图是很重要的。例如，假设一个透明的视图覆盖在应用内所有视图的最上面。覆盖层有子视图应该相应触摸事件的一些控件和按钮。但是触摸覆盖层的其他区域应该传递给覆盖层下面的视图。为了完成这个行为，覆盖层需要覆盖hitTest:withEvent:方法来返回包含触摸点的子视图中的一个，然后其他情况返回nil，包括覆盖层包含触摸点的情况：</p>
+
+<pre><code>- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *hitTestView = [super hitTest:point withEvent:event];
+    if (hitTestView == self) {
+        hitTestView = nil;
+    }
+    return hitTestView;
+}
+</code></pre>
+
+<p><strong>3.传递触摸事件给子视图</strong>
+一个不同的使用场景可能需要父视图重定向所有的触摸事件给他唯一的子视图。这个行为是有必要的当子视图部分占据他的父视图，但是子视图应该响应所有的触摸事件包括发生在父视图上的。例如，假设一个由一个父视图和一个<code>pagingEnabled</code>设置为YES和<code>clipsToBounds</code>设置为NO（为了实现传动带的效果）的<code>UIScrollView</code>组成的图片浏览器：</p>
+
+<p><img src="../content/images/2016/02/hit-test-pass-touches-to-subviews.png" alt="hit-test-pass-touches-to-subviews"></p>
+
+<p>为了使<code>UIScrollView</code>响应不发生在自己边界内但是在父视图的边界内的触摸事件，父视图的<code>hitTest:withEvent:</code>方法应该像下面这样重写：</p>
+
+<pre><code>- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *hitTestView = [super hitTest:point withEvent:event];
+    if (hitTestView) {
+        hitTestView = self.scrollView;
+    }
+    return hitTestView;
+}
+</code></pre>
+
+<p><strong>如有问题请指正</strong>
+另外一篇是一位大神的翻译，翻译了一半的时候才发现的，索性后半部分就直接粘贴了。</p>
+
+<p>大神翻译：<a href="http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/">http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/</a></p>
+
+<p>原文地址：<a href="http://smnh.me/hit-testing-in-ios/">http://smnh.me/hit-testing-in-ios/</a></p>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../githubpages-ghostda-jian-bo-ke/" title="link to GitHubPages＋Ghost搭建博客">GitHubPages＋Ghost搭建博客</a></h2>
+       <p class="excerpt">对IT技术的学习也有不短的时间了。经常观看大神们的博客，对于他们博客不仅仅内容精彩，而且主题也很大气高端，所以也希望自己能有一个这样的博客。 首先就是要选择博客平台，经过一番对比，最终选GitHub…</p>
+       <div class="post-list__meta"><time datetime="30 1月 2016" class="post-list__meta--date date">30 1月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../githubpages-ghostda-jian-bo-ke/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="7" data-title="Hit-Testing in iOS" data-url="ioneway.github.io/hit-testing-in-ios/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2016  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=c7c2ea34c8"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=c7c2ea34c8"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
