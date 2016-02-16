@@ -38,7 +38,7 @@
     <meta property="og:description" content='Hit-testing翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过反向前序深度优先算法来便利视图的层次结构，从而实现上述功能。 在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。 如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。   注意：不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。 hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。   注意：需要了解的是，手指被移动到了hit-test...'>
     <meta property="og:url" content="http://localhost:2368/hit-testing-in-ios/">
     <meta property="article:published_time" content="2016-02-16T06:29:52.378Z">
-    <meta property="article:modified_time" content="2016-02-16T11:08:18.034Z">
+    <meta property="article:modified_time" content="2016-02-16T11:09:25.755Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Hit-Testing in iOS">
@@ -61,7 +61,7 @@
     "headline": "Hit-Testing in iOS",
     "url": "http://localhost:2368/hit-testing-in-ios/",
     "datePublished": "2016-02-16T06:29:52.378Z",
-    "dateModified": "2016-02-16T11:08:18.034Z",
+    "dateModified": "2016-02-16T11:09:25.755Z",
     "description": "Hit-testing翻译为中文是&quot;命中测试&quot;，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过反向前序深度优先算法来便利视图的层次结构，从而实现上述功能。 在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。 如上图所示，每次手指触碰屏幕都会触发hit-testing, 并且hit-testing在各个视图和gesture recognizer接收UIEvent 事件之前触发。   注意：不清楚是什么原因，hit-testing会连续执行多次。并且，hit-test view 的hit-testing也会执行多次。 hit-testing完成后，最前方且能够接收事件的view就会被确定为hit-test view。hit-test view与各个阶段(begin,move,end,cancel)的触摸事件序列的UITouch对象相关联。hit-test view确定后，开始接收touch事件序列。   注意：需要了解的是，手指被移动到了hit-test..."
 }
     </script>
@@ -324,11 +324,9 @@
 
 <p><strong>如有问题请指正, 谢谢。</strong></p>
 
-<p>另外一篇是一位大神的翻译，翻译了一半的时候才发现的，索性后半部分就直接粘贴了。</p>
-
-<p>大神翻译：<a href="http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/">http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/</a></p>
-
-<p>原文地址：<a href="http://smnh.me/hit-testing-in-ios/">http://smnh.me/hit-testing-in-ios/</a></p>
+<p>另外一篇是一位大神的翻译，翻译了一半的时候才发现的，索性后半部分就直接粘贴了。<br>
+大神翻译：<a href="http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/">http://joywii.github.io/blog/2015/03/17/ioszhong-de-hit-testing/</a><br>
+原文地址：<a href="http://smnh.me/hit-testing-in-ios/">http://smnh.me/hit-testing-in-ios/</a></p>
     </section>
 
   </article>
