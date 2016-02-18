@@ -1,4 +1,125 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 06:03:27 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>如何添加 Quick actions</title><description>&lt;p&gt;原文地址：&lt;a href="http://iostuts.io/2015/10/08/how-to-add-quick-actions/"&gt;http://iostuts.io/2015/10/08/how-to-add-quick-actions/&lt;/a&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 06:49:38 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>如何检测任意view的subviews的关系树</title><description>&lt;p&gt;原文地址：&lt;a href="http://www.glimsoft.com/01/07/how-to-inspect-subviews-hierarchy-of-any-uiview/"&gt;http://www.glimsoft.com/01/07/how-to-inspect-subviews-hierarchy-of-any-uiview/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本程序设计教程（或指南，如果你希望如此），我要解释一个简单的方式打印出任何UIView整个子视图层次（子类）。我们要通过创建UIView类，并添加一个递归方法来查看整个树结构。&lt;/p&gt;
+
+&lt;p&gt;现在，可能有人想知道什么是‘category’：它是一种不需要继承任何类来向类中添加方法的一种简洁方式。想了解更多可以参考官方文档：&lt;a href="http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/chapters/occategories.html"&gt;documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在某些情况下，当你在寻找一些基础的东西，比如MKMapView的组成；为了修改某些标签，等等，我觉得这种情况很多，所以没有必要再举例了。&lt;/p&gt;
+
+&lt;p&gt;以下是我们的一个category(file UIView+printSubviews.h)：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;#import &amp;lt;Foundation/Foundation.h&amp;gt;
+
+
+@interface UIView (PrintSubviews)
+
+- (void)printSubviewsWithIndentation:(int)indentation;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Objective-C的Category声明十分简单且重要。更重要的是我们的方法可以在任何UIView及其子类(&lt;/p&gt;</description><link>http://localhost:2368/ru-he-jian-ce-ren-yi-viewde-subviewsde-guan-xi-shu/</link><guid isPermaLink="false">42123b1c-bd2b-401f-8693-add057cec231</guid><dc:creator>ioneway</dc:creator><pubDate>Thu, 18 Feb 2016 06:47:50 GMT</pubDate><content:encoded>&lt;p&gt;原文地址：&lt;a href="http://www.glimsoft.com/01/07/how-to-inspect-subviews-hierarchy-of-any-uiview/"&gt;http://www.glimsoft.com/01/07/how-to-inspect-subviews-hierarchy-of-any-uiview/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本程序设计教程（或指南，如果你希望如此），我要解释一个简单的方式打印出任何UIView整个子视图层次（子类）。我们要通过创建UIView类，并添加一个递归方法来查看整个树结构。&lt;/p&gt;
+
+&lt;p&gt;现在，可能有人想知道什么是‘category’：它是一种不需要继承任何类来向类中添加方法的一种简洁方式。想了解更多可以参考官方文档：&lt;a href="http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/chapters/occategories.html"&gt;documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在某些情况下，当你在寻找一些基础的东西，比如MKMapView的组成；为了修改某些标签，等等，我觉得这种情况很多，所以没有必要再举例了。&lt;/p&gt;
+
+&lt;p&gt;以下是我们的一个category(file UIView+printSubviews.h)：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;#import &amp;lt;Foundation/Foundation.h&amp;gt;
+
+
+@interface UIView (PrintSubviews)
+
+- (void)printSubviewsWithIndentation:(int)indentation;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Objective-C的Category声明十分简单且重要。更重要的是我们的方法可以在任何UIView及其子类(UIScrollView, MKMapView, UITableView, UIButton 等等)中工作。现在看看category的实现文件，如下代码：  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;#import "UIView+printSubviews.h"
+
+
+@implementation UIView (PrintSubviews)
+
+- (void)printSubviewsWithIndentation:(int)indentation {
+
+    // Get all the subviews of the current view
+    NSArray *subviews = [self subviews];   
+
+    // Loop through the whole subviews array. We are using the plain-old C-like for loop,
+    // just for its simplicity and also to be provided with the iteration number
+    for (int i = 0; i &amp;lt; [subviews count]; i++) {
+
+        // Get the subview at current index
+        UIView *currentSubview = [subviews objectAtIndex:i];   
+
+        // We will create our description using this mutable string
+        NSMutableString *currentViewDescription = [[NSMutableString alloc] init];
+
+        // Indent the actual description to provide visual clue of  how deeply is the current view nested
+        for (int j = 0; j &amp;lt;= indentation; j++) {
+            [currentViewDescription appendString:@"   "];
+        }
+
+        // Construct the actual description string. Note that we are using just index of the current view
+        // and name of its class, but it's up to you to print anything you are interested in
+        // (for example the frame property using the NSStringFromCGRect(currentSubview.frame) )
+        [currentViewDescription appendFormat:@"[%d]: class: '%@'", i, NSStringFromClass([currentSubview class])];
+
+        // Log the description string to the console
+        NSLog(@"%@", currentViewDescription);
+
+        // Be good memory citizen
+        [currentViewDescription release];
+
+        // the 'recursiveness' nature of this method. Call it on the current subview, with greater indentation
+        [currentSubview printSubviewsWithIndentation:indentation+1];
+    }
+}
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我觉得不需要作太多的解释，因为十分的简单。现在我将给大家展示一个使用实例，以及该方法所产生的输出。我要在一个有多个annotations，其中一个annotation被选中并弹出callout view的MKMapView上使用改方法。&lt;/p&gt;
+
+&lt;p&gt;首先你需要在你将要使用的类中引入这个category的头文件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;#import "UIView+printSubviews.h"
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后在你希望检测的view上调用&lt;code&gt;-printSubviewsWithIndentation:&lt;/code&gt;方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;NSLog(@"*** Printing out all the subviews of MKMapView ***");  
+[mapView printSubviewsWithIndentation:0];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在你可以看到如下的输出：
+&lt;img src="http://localhost:2368/ru-he-jian-ce-ren-yi-viewde-subviewsde-guan-xi-shu/NO_Image" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;现在你可以看到mapView中所有藏在屏幕后面的view了，每一行输出前面的［］中的数字代表该行的view在树结构中的层次索引。&lt;/p&gt;
+
+&lt;p&gt;你可以向下面这样获取到MKAnnotationContainerView&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;UIView *annotationContainerView = [[[[[[mapView subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:1];  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然，这种获取方式是不安全的，因为它取决于视图的特定顺序。所以你在使用以上方法获取对应视图的时候必须对它做一次测试：
+if [subviews count] &gt; 0，或者使用像下面这样使用 NSClassFromString()：  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ObjC"&gt;for (UIView *subview in subviews) {  
+        if ([subview isKindOfClass:NSClassFromString(@"NameOfTheClass")]) {
+            // We found the subview that we want
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最后我想提示大家，苹果不希望开发者这样做，因为一些UIKit类的子视图是私有的，因此他们将会在将来更改这些类。所以以上方法只能在你没有其他方式的情况下谨慎的使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;如有错误请指正，谢谢&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title>如何添加 Quick actions</title><description>&lt;p&gt;原文地址：&lt;a href="http://iostuts.io/2015/10/08/how-to-add-quick-actions/"&gt;http://iostuts.io/2015/10/08/how-to-add-quick-actions/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;这篇教程介绍了Quick actions是如何工作的，如何创建Quick actions以及如何执行actions。此外，我们创建一个简单的app包含两个静态的Quick actions和一个动态的Quick actions。&lt;/p&gt;
 
