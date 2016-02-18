@@ -1,4 +1,85 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 16 Feb 2016 11:09:42 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Hit-Testing in iOS</title><description>&lt;p&gt;&lt;code&gt;Hit-testing&lt;/code&gt;翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为&lt;code&gt;hit-test view&lt;/code&gt;。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过&lt;code&gt;反向前序深度优先&lt;/code&gt;算法来便利视图的层次结构，从而实现上述功能。&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 01:44:35 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>CGRectInset 和 CGRectOffset</title><description>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt; func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。&lt;/p&gt;
+
+&lt;p&gt;参数：&lt;br&gt;
+rect:原矩形. &lt;br&gt;
+dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄. &lt;br&gt;
+dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)testCGRectInset  
+{  
+    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
+    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
+    [self.view addSubview:&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/cgrectinset-he-cgrectoffset/</link><guid isPermaLink="false">efaa1ad3-946c-4240-8645-0318b6ec2d00</guid><dc:creator>ioneway</dc:creator><pubDate>Wed, 17 Feb 2016 08:32:50 GMT</pubDate><content:encoded>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt; func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。&lt;/p&gt;
+
+&lt;p&gt;参数：&lt;br&gt;
+rect:原矩形. &lt;br&gt;
+dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄. &lt;br&gt;
+dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)testCGRectInset  
+{  
+    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
+    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
+    [self.view addSubview:view1];  
+
+    //根据view1的大小变换后创建view2;  
+    CGRect view2Rect=CGRectInset(view1.frame, 20, 20);  
+    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
+    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
+    [self.view addSubview:view2];  
+
+
+}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如上代码：产生的效果如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/20150731115650388.png" alt="CGRectInset"&gt;&lt;/p&gt;
+
+&lt;h3 id="cgrectoffset"&gt;CGRectOffset&lt;/h3&gt;
+
+&lt;p&gt;返回一个经过平移后的矩形。(与原矩形大小一致)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;func CGRectOffset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参数：&lt;br&gt;
+rect: 原矩形 &lt;br&gt;
+dx: 平移的x坐标 &lt;br&gt;
+dy: 平移的y坐标&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)testCGRectOffset  
+{  
+    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
+    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
+    [self.view addSubview:view1];  
+
+    //根据view1的大小变换后创建view2;  
+    CGRect view2Rect=CGRectOffset(view1.frame, 20, 20);  
+    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
+    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
+    [self.view addSubview:view2];    
+}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;
+以上代码运行效果图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/20150731120023106.png" alt="CGRectOffset"&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt; CGRectInset主要是得到一个缩放了的矩形，而CGRectOffset是得到一个平移了的矩形。&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>Hit-Testing in iOS</title><description>&lt;p&gt;&lt;code&gt;Hit-testing&lt;/code&gt;翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为&lt;code&gt;hit-test view&lt;/code&gt;。iOS使用hit-testing来确定那一个UIView是用户手指下最靠前的且能够接收touch事件的view。hit-testing通过&lt;code&gt;反向前序深度优先&lt;/code&gt;算法来便利视图的层次结构，从而实现上述功能。&lt;/p&gt;
 
 &lt;p&gt;在解释hit-testing 如何工作前，我们先要了解下hit-testing是在什么时候执行的。以下图分解了一个手指从触摸屏幕到离开屏幕的过程。&lt;/p&gt;
 

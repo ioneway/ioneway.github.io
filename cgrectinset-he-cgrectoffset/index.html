@@ -1,0 +1,295 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CGRectInset 和 CGRectOffset</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CGRectInset 和 CGRectOffset">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CGRectInset 和 CGRectOffset">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=c7c2ea34c8">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=c7c2ea34c8">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CGRectInset 和 CGRectOffset">
+    <meta property="og:description" content="CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,...">
+    <meta property="og:url" content="http://localhost:2368/cgrectinset-he-cgrectoffset/">
+    <meta property="article:published_time" content="2016-02-17T08:32:50.508Z">
+    <meta property="article:modified_time" content="2016-02-17T09:55:47.594Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CGRectInset 和 CGRectOffset">
+    <meta name="twitter:description" content="CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,...">
+    <meta name="twitter:url" content="http://localhost:2368/cgrectinset-he-cgrectoffset/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "CGRectInset 和 CGRectOffset",
+    "url": "http://localhost:2368/cgrectinset-he-cgrectoffset/",
+    "datePublished": "2016-02-17T08:32:50.508Z",
+    "dateModified": "2016-02-17T09:55:47.594Z",
+    "description": "CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="17 2月 2016" class="post-meta__date date">17 2月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">CGRectInset 和 CGRectOffset</h1>
+    </header>
+
+    <section class="post">
+      <h3 id="cgrectinset">CGRectInset</h3>
+
+<pre><code> func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&gt; CGRect
+</code></pre>
+
+<p>返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。</p>
+
+<p>参数：<br>
+rect:原矩形. <br>
+dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄. <br>
+dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短.</p>
+
+<pre><code>-(void)testCGRectInset  
+{  
+    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
+    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
+    [self.view addSubview:view1];  
+
+    //根据view1的大小变换后创建view2;  
+    CGRect view2Rect=CGRectInset(view1.frame, 20, 20);  
+    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
+    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
+    [self.view addSubview:view2];  
+
+
+}  
+</code></pre>
+
+<p>如上代码：产生的效果如图：</p>
+
+<p><img src="../content/images/2016/02/20150731115650388.png" alt="CGRectInset"></p>
+
+<h3 id="cgrectoffset">CGRectOffset</h3>
+
+<p>返回一个经过平移后的矩形。(与原矩形大小一致)</p>
+
+<pre><code>func CGRectOffset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&gt; CGRect  
+</code></pre>
+
+<p>参数：<br>
+rect: 原矩形 <br>
+dx: 平移的x坐标 <br>
+dy: 平移的y坐标</p>
+
+<pre><code>-(void)testCGRectOffset  
+{  
+    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
+    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
+    [self.view addSubview:view1];  
+
+    //根据view1的大小变换后创建view2;  
+    CGRect view2Rect=CGRectOffset(view1.frame, 20, 20);  
+    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
+    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
+    [self.view addSubview:view2];    
+}  
+</code></pre>
+
+<p>
+以上代码运行效果图：</p>
+
+<p><img src="../content/images/2016/02/20150731120023106.png" alt="CGRectOffset"></p>
+
+<blockquote>
+  <p><strong>总结：</strong> CGRectInset主要是得到一个缩放了的矩形，而CGRectOffset是得到一个平移了的矩形。</p>
+</blockquote>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../hit-testing-in-ios/" title="link to Hit-Testing in iOS">Hit-Testing in iOS</a></h2>
+       <p class="excerpt">Hit-testing翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个…</p>
+       <div class="post-list__meta"><time datetime="16 2月 2016" class="post-list__meta--date date">16 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../hit-testing-in-ios/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="8" data-title="CGRectInset 和 CGRectOffset" data-url="ioneway.github.io/cgrectinset-he-cgrectoffset/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2016  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=c7c2ea34c8"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=c7c2ea34c8"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
