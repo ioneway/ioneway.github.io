@@ -1,0 +1,568 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>如何添加 Quick actions</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="如何添加 Quick actions">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="如何添加 Quick actions">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=c7c2ea34c8">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=c7c2ea34c8">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="如何添加 Quick actions">
+    <meta property="og:description" content="原文地址：http://iostuts.io/2015/10/08/how-to-add-quick-actions/ 这篇教程介绍了Quick actions是如何工作的，如何创建Quick actions以及如何执行actions。此外，我们创建一个简单的app包含两个静态的Quick actions和一个动态的Quick actions。 我们首先开始静态Quick actions创建。他们都被定义在Info.plist文件的特定键－－UIApplicationShortcutItems中。每一个子项是一个字典且至少要包含以下键： 1. UIApplicationShortcutItemType ：作为UIApplicationShortcutItem的一部分发送给你的应用。可以依据不同的shortcut类型用于执行你的actions。  2. UIApplicationShortcutItemTitle：展示在你的quick action菜单中的action标题。如果标题一行无法显示并且你没有指定子标题那么它将显示两行。可以使用本地化(localised). 一些可选键： 1. UIApplicationShortcutItemSubtitle: 用户展示你的actions的子标题的字符串。它将显示在你的quick actions标题的下方。可以本地化。...">
+    <meta property="og:url" content="http://localhost:2368/ru-he-tian-jia-quick-actions/">
+    <meta property="article:published_time" content="2016-02-18T06:02:13.118Z">
+    <meta property="article:modified_time" content="2016-02-18T06:02:13.114Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="如何添加 Quick actions">
+    <meta name="twitter:description" content="原文地址：http://iostuts.io/2015/10/08/how-to-add-quick-actions/ 这篇教程介绍了Quick actions是如何工作的，如何创建Quick actions以及如何执行actions。此外，我们创建一个简单的app包含两个静态的Quick actions和一个动态的Quick actions。 我们首先开始静态Quick actions创建。他们都被定义在Info.plist文件的特定键－－UIApplicationShortcutItems中。每一个子项是一个字典且至少要包含以下键： 1. UIApplicationShortcutItemType ：作为UIApplicationShortcutItem的一部分发送给你的应用。可以依据不同的shortcut类型用于执行你的actions。  2. UIApplicationShortcutItemTitle：展示在你的quick action菜单中的action标题。如果标题一行无法显示并且你没有指定子标题那么它将显示两行。可以使用本地化(localised). 一些可选键： 1. UIApplicationShortcutItemSubtitle: 用户展示你的actions的子标题的字符串。它将显示在你的quick actions标题的下方。可以本地化。...">
+    <meta name="twitter:url" content="http://localhost:2368/ru-he-tian-jia-quick-actions/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "如何添加 Quick actions",
+    "url": "http://localhost:2368/ru-he-tian-jia-quick-actions/",
+    "datePublished": "2016-02-18T06:02:13.118Z",
+    "dateModified": "2016-02-18T06:02:13.114Z",
+    "description": "原文地址：http://iostuts.io/2015/10/08/how-to-add-quick-actions/ 这篇教程介绍了Quick actions是如何工作的，如何创建Quick actions以及如何执行actions。此外，我们创建一个简单的app包含两个静态的Quick actions和一个动态的Quick actions。 我们首先开始静态Quick actions创建。他们都被定义在Info.plist文件的特定键－－UIApplicationShortcutItems中。每一个子项是一个字典且至少要包含以下键： 1. UIApplicationShortcutItemType ：作为UIApplicationShortcutItem的一部分发送给你的应用。可以依据不同的shortcut类型用于执行你的actions。  2. UIApplicationShortcutItemTitle：展示在你的quick action菜单中的action标题。如果标题一行无法显示并且你没有指定子标题那么它将显示两行。可以使用本地化(localised). 一些可选键： 1. UIApplicationShortcutItemSubtitle: 用户展示你的actions的子标题的字符串。它将显示在你的quick actions标题的下方。可以本地化。..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="18 2月 2016" class="post-meta__date date">18 2月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">如何添加 Quick actions</h1>
+    </header>
+
+    <section class="post">
+      <p>原文地址：<a href="http://iostuts.io/2015/10/08/how-to-add-quick-actions/">http://iostuts.io/2015/10/08/how-to-add-quick-actions/</a></p>
+
+<p>这篇教程介绍了Quick actions是如何工作的，如何创建Quick actions以及如何执行actions。此外，我们创建一个简单的app包含两个静态的Quick actions和一个动态的Quick actions。</p>
+
+<p>我们首先开始静态Quick actions创建。他们都被定义在Info.plist文件的特定键－－UIApplicationShortcutItems中。每一个子项是一个字典且至少要包含以下键：
+1. <strong>UIApplicationShortcutItemType</strong> ：作为UIApplicationShortcutItem的一部分发送给你的应用。可以依据不同的shortcut类型用于执行你的actions。 <br>
+2. <strong>UIApplicationShortcutItemTitle</strong>：展示在你的quick action菜单中的action标题。如果标题一行无法显示并且你没有指定子标题那么它将显示两行。可以使用本地化(localised).</p>
+
+<p>一些可选键：
+1. <strong>UIApplicationShortcutItemSubtitle</strong>: 用户展示你的actions的子标题的字符串。它将显示在你的quick actions标题的下方。可以本地化。 <br>
+2. <strong>UIApplicationShortcutItemIconType</strong>：定义内置图标类型的字符串，可选类型列表可以查询<a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/index.html#//apple_ref/c/tdef/UIApplicationShortcutIconType">这里</a>； <br>
+3. UIApplicationShortcutItemIconFile：一个指定Assets Catalog或者Bundle中的字符串。图像尺寸和设计的详细信息可以在<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html#//apple_ref/doc/uid/TP40006556-CH66-SW1">这里</a>找到如果指定了此键，则系统会忽略<strong>UIApplicationShortcutItemIconType</strong> <br>
+4. <strong>UIApplicationShortcutItemUserInfo</strong>：一个字典，包含你想要解析的其他信息。</p>
+
+<p>等不及向你展示它是如何工作的了。</p>
+
+<p>我们需要创建一个Single View应用(File -&gt; New -&gt; Project).</p>
+
+<p>接着，打开Info.Plist文件并拷贝黏贴以下内容。</p>
+
+<pre><code class="language-HTML">&lt;key&gt;UIApplicationShortcutItems&lt;/key&gt;  
+&lt;array&gt;  
+  &lt;dict&gt;
+    &lt;key&gt;UIApplicationShortcutItemIconType&lt;/key&gt;
+    &lt;string&gt;UIApplicationShortcutIconTypeSearch&lt;/string&gt;   
+    &lt;key&gt;UIApplicationShortcutItemTitle&lt;/key&gt;
+    &lt;string&gt;SHORTCUT_TITLE_SEARCH&lt;/string
+    &lt;key&gt;UIApplicationShortcutItemType&lt;/key
+    &lt;string&gt;$(PRODUCT_BUNDLE_IDENTIFIER).Search&lt;/string&gt;
+  &lt;/dict&gt;
+  &lt;dict&gt;
+    &lt;key&gt;UIApplicationShortcutItemTitle&lt;/key&gt;
+    &lt;string&gt;SHORTCUT_TITLE_FAVORITES&lt;/string
+    &lt;key&gt;UIApplicationShortcutItemType&lt;/key
+    &lt;string&gt;$(PRODUCT_BUNDLE_IDENTIFIER).Favorites&lt;/string&gt;
+  &lt;/dict&gt;
+&lt;/array&gt;  
+</code></pre>
+
+<p>如果你没有iPhone6s和6splus,那么可以用<a href="https://github.com/DeskConnect/SBShortcutMenuSimulator">tweak</a>在模拟器上测试。</p>
+
+<p>Build你的项目并试着3D touch你的app图标，它将向你展示一个菜单，十分的简单且很好，难道不是吗？ <br>
+<img src="../content/images/2016/02/shortcuts_1.png" alt="shortcuts_1.png"></p>
+
+<p>你可能已经注意到了两个问题：
+1. 标题折行了。 <br>
+2. 当你点击actions，它只是启动了app，并没有做任何的操作。</p>
+
+<p>让我们来完成余下的任务！</p>
+
+<p>我们的下一个挑战是如何执行这些actions。我们要时刻记得这有两种不同情况。
+1. app处于关闭状态，用户通过quick action shorcut来打开应用。<code>application:didFinishLaunchingWithOptions:</code>将会被调用。参数launchingOptions字典中键名UIApplicationLaunchOptionsShortcutItemKey对应的value是UIApplicationShortcutItem对象。 <br>
+2. app之前被打开过，此时处于挂起状态，用户通过shortcut继续使用。这种情况下应用将被唤醒，执行：<code>application:performActionForShortcutItem:completionHandler:</code>方法。</p>
+
+<p>首先，我们创建一个私有方法，用来执行shortcut items。</p>
+
+<pre><code class="language-Swift">private func handleShortcutItem(shortcutItem: UIApplicationShortcutItem) {  
+  if let rootViewController = window?.rootViewController {
+    rootViewController.dismissViewControllerAnimated(false, completion: nil)
+    let alertController = UIAlertController(title: "", message: shortcutItem.localizedTitle, preferredStyle: .Alert)
+    alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    rootViewController.presentViewController(alertController, animated: true, completion: nil)
+  }
+}
+</code></pre>
+
+<p>接着，我们添加当app通过quick action返回前台的时候获取shortcut item的逻辑，黏贴以下代码到<code>application:didFinishLaunchingWithOptions:</code>中。请不要忘记检测你的iOS系统版本，如果你的应用支持iOS8，app将会crash。</p>
+
+<pre><code class="language-Swift">if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {  
+  handleShortcutItem(shortcutItem)
+}
+</code></pre>
+
+<p>最后是声明：<code>application:performActionForShortcutItem:completionHandler:</code>,该方法执行quick action，前提是app没有退出。将以下代码黏贴到AppDelegate中。</p>
+
+<pre><code class="language-Swift">func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -&gt; Void) {  
+  handleShortcutItem(shortcutItem)
+}
+</code></pre>
+
+<p>重新运行app并按压icon图标。你会发现当你使用quick action时，将会弹出alert并附带action 标题。</p>
+
+<p>在实际应用中，你应该是希望不同的shortcut item执行不同的actions。前面已经述说了，<strong>UIApplicationShortcutItemType是用来标记actions类型的</strong>。让我们继续吧！</p>
+
+<p>将以下代码黏贴到AppDelegate的声明中：</p>
+
+<pre><code class="language-Swift">enum DGShortcutItemType: String {  
+    case Search
+    case Favorites
+
+    init?(shortcutItem: UIApplicationShortcutItem) {
+        guard let last = shortcutItem.type.componentsSeparatedByString(".").last else { return nil }
+        self.init(rawValue: last)
+    }
+
+    var type: String {
+        return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+    }
+}
+</code></pre>
+
+<p>我们这里做的十分简单。每一个shortcut item包含一个类型，在示例中是：
+* <code>$(PRODUCT_BUNDLE_IDENTIFIER).Favorites</code>
+* <code>$(PRODUCT_BUNDLE_IDENTIFIER).Search</code></p>
+
+<p>我们创建一个enumeration 用来解析这些值，可以使用比较简洁的写法：.Search 或者.Favorites</p>
+
+<p>现在用以下代码替换我们刚刚声明的handleShortcutItem方法</p>
+
+<pre><code class="language-Swift">private func handleShortcutItem(shortcutItem: UIApplicationShortcutItem) {  
+        if let rootViewController = window?.rootViewController, let shortcutItemType = DGShortcutItemType(shortcutItem: shortcutItem) {
+            rootViewController.dismissViewControllerAnimated(false, completion: nil)
+            let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+
+            switch shortcutItemType {
+            case .Search:
+                alertController.message = "It's time to search"
+                break
+            case .Favorites:
+                alertController.message = "Show me my favorites"
+                break
+            }
+
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            rootViewController.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+</code></pre>
+
+<p>我门已经做了以下事情：
+1.  我么在if控制语句内添加了<code>let shortcutItemType = DGShortcutItemType(shortcutItem: shortcutItem)</code> 来确保这些值不是空的。如果我们添加一个新的shortcut则它可能为空，但是不会向enum添加新值。 <br>
+2.  添加转换语句， 使每一个shortcut item类型能有不同的action</p>
+
+<p>运行项目并测试。现在每一个shortcut应该可以展示不同的alert了。</p>
+
+<p>Hm. 但是有一个地方肯定是错误的，我不希望是这样的：</p>
+
+<p><img src="../content/images/2016/02/shortcuts_3.png" alt="shortcuts_3.png"></p>
+
+<p>这些shortcut 没有对应的图片，看起来不如Search shortcut那么美观。我想改进它。</p>
+
+<p>下载这些文件（<a href="https://drive.google.com/file/d/0B16pTxwnU1H4VnZzbDF0Y19aRkE/view?usp=sharing">this file</a>），并提取其中的图片放到Images.xcassets.</p>
+
+<p>打开Info.plist源码，并在Favorites Item 中添加如下两行。</p>
+
+<pre><code class="language-HTML">&lt;key&gt;UIApplicationShortcutItemIconFile&lt;/key&gt;  
+&lt;string&gt;ShortcutIconFavorites&lt;/string&gt;  
+</code></pre>
+
+<p>所有UIApplicationShortcutItems项应该是这样的：</p>
+
+<pre><code class="language-HTML"> &lt;key&gt;UIApplicationShortcutItems&lt;/key&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;UIApplicationShortcutItemIconType&lt;/key&gt;
+            &lt;string&gt;UIApplicationShortcutIconTypeSearch&lt;/string&gt;
+            &lt;key&gt;UIApplicationShortcutItemTitle&lt;/key&gt;
+            &lt;string&gt;SHORTCUT_TITLE_SEARCH&lt;/string&gt;
+            &lt;key&gt;UIApplicationShortcutItemType&lt;/key&gt;
+            &lt;string&gt;$(PRODUCT_BUNDLE_IDENTIFIER).Search&lt;/string&gt;
+        &lt;/dict&gt;
+        &lt;dict&gt;
+            &lt;key&gt;UIApplicationShortcutItemTitle&lt;/key&gt;
+            &lt;string&gt;SHORTCUT_TITLE_FAVORITES&lt;/string&gt;
+            &lt;key&gt;UIApplicationShortcutItemType&lt;/key&gt;
+            &lt;string&gt;$(PRODUCT_BUNDLE_IDENTIFIER).Favorites&lt;/string&gt;
+            &lt;key&gt;UIApplicationShortcutItemIconFile&lt;/key&gt;
+            &lt;string&gt;ShortcutIconFavorites&lt;/string&gt;
+        &lt;/dict&gt;
+    &lt;/array&gt;
+</code></pre>
+
+<p>运行项目，现在当你3D touch 你的app icon时，你可以看到这样：
+<img src="../content/images/2016/02/shortcuts_4-1.png" alt="shortcuts_4-1.png"></p>
+
+<p>现在它看起来要好的多，我们已经学习了在quick action shortcuts中如何使用自定义assets。</p>
+
+<p>现在让我们来试着做一个动态的shortcut，从iOS9开始，UIApplication类有一个public变量<code>public var shortcutItems: [UIApplicationShortcutItem]?</code>。</p>
+
+<p>注册一个shortcuts 在home屏展示， 或者检索已经注册的shortcuts.</p>
+
+<p>这正是我们要使用的。我们将创建一个接口来允许我们输入数据并更新/删除当前的shortcut。</p>
+
+<p>打开viewcontroller.swift文件，并替换所有代码如下：</p>
+
+<pre><code class="language-Swift">import UIKit
+
+extension UIApplicationShortcutIconType {  
+    var toString: String {
+        switch self {
+        case .Compose: return "Compose"
+        case .Play: return "Play"
+        case .Pause: return "Pause"
+        case .Add: return "Add"
+        case .Location: return "Location"
+        case .Search: return "Search"
+        case .Share: return "Share"
+        }
+    }
+
+    init?(string: String) {
+        switch string {
+        case "Compose": self.init(rawValue: UIApplicationShortcutIconType.Compose.rawValue)
+        case "Play": self.init(rawValue: UIApplicationShortcutIconType.Play.rawValue)
+        case "Pause": self.init(rawValue: UIApplicationShortcutIconType.Pause.rawValue)
+        case "Add": self.init(rawValue: UIApplicationShortcutIconType.Add.rawValue)
+        case "Location": self.init(rawValue: UIApplicationShortcutIconType.Location.rawValue)
+        case "Search": self.init(rawValue: UIApplicationShortcutIconType.Search.rawValue)
+        case "Share": self.init(rawValue: UIApplicationShortcutIconType.Share.rawValue)
+        default: return nil
+        }
+    }
+
+    static var allTypesToStrings: [String] {
+        return [UIApplicationShortcutIconType.Compose.toString, UIApplicationShortcutIconType.Play.toString, UIApplicationShortcutIconType.Pause.toString, UIApplicationShortcutIconType.Add.toString, UIApplicationShortcutIconType.Location.toString, UIApplicationShortcutIconType.Search.toString, UIApplicationShortcutIconType.Share.toString]
+    }
+}
+
+class ViewController: UIViewController {
+
+    // MARK: -
+    // MARK: Vars
+
+    private let titleTextField = UITextField()
+    private let subtitleTextField = UITextField()
+    private var iconTypeSegmentedControl = UISegmentedControl(items: UIApplicationShortcutIconType.allTypesToStrings)
+    private let updateButton = UIButton(type: .System)
+
+    // MARK: -
+
+    override func loadView() {
+        super.loadView()
+        titleTextField.placeholder = "Title"
+        titleTextField.delegate = self
+        view.addSubview(titleTextField)
+
+        subtitleTextField.placeholder = "Subtitle"
+        subtitleTextField.delegate = self
+        view.addSubview(subtitleTextField);
+
+        updateButton.setTitle("Update shortcut", forState: .Normal)
+        updateButton.addTarget(self, action: Selector("updateDynamicAction"), forControlEvents: .TouchUpInside)
+        view.addSubview(updateButton)
+
+        iconTypeSegmentedControl.selectedSegmentIndex = 0
+        view.addSubview(iconTypeSegmentedControl)
+
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped"))
+    }
+
+    // MARK: -
+    // MARK: Methods
+
+    func viewTapped() {
+        view.endEditing(true)
+    }
+
+    func updateDynamicAction() {
+        guard let title = titleTextField.text else {
+            UIApplication.sharedApplication().shortcutItems = nil
+            return
+        }
+
+        let type = NSBundle.mainBundle().bundleIdentifier! + ".Dynamic"
+        let shortcutIconType = UIApplicationShortcutIconType(string: iconTypeSegmentedControl.titleForSegmentAtIndex(iconTypeSegmentedControl.selectedSegmentIndex)!)!
+        let icon = UIApplicationShortcutIcon(type: shortcutIconType)
+
+        let dynamicShortcut = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitleTextField.text, icon: icon, userInfo: nil)
+        UIApplication.sharedApplication().shortcutItems = [dynamicShortcut]
+    }
+
+    // MARK: -
+    // MARK: Layout
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        let width = view.bounds.width
+
+        let horizontalMargin: CGFloat = 20.0
+        let elementHeight: CGFloat = 40.0
+        let verticalSpacing: CGFloat = 20.0
+
+        titleTextField.frame = CGRect(x: horizontalMargin, y: 50.0, width: width - 2 * horizontalMargin, height: elementHeight)
+        subtitleTextField.frame = CGRectOffset(titleTextField.frame, 0.0, elementHeight + verticalSpacing)
+        iconTypeSegmentedControl.frame = CGRectOffset(subtitleTextField.frame, 0.0, elementHeight + verticalSpacing)
+        updateButton.frame = CGRectOffset(iconTypeSegmentedControl.frame, 0.0, elementHeight + verticalSpacing)
+    }
+
+}
+
+// MARK: -
+// MARK: UITextField Delegate
+
+extension ViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(textField: UITextField) -&gt; Bool {
+        if textField == titleTextField {
+            subtitleTextField.becomeFirstResponder()
+        } else if textField == subtitleTextField {
+            subtitleTextField.resignFirstResponder()
+        }
+
+        return true
+    }
+
+}
+</code></pre>
+
+<p>这些代码看起来很多，但是它十分基础并且不需要解释。</p>
+
+<p>运行项目，你会看到简单的界面：
+<img src="../content/images/2016/02/shortcuts_5.png" alt="shortcuts_5.png"></p>
+
+<p>点击：“Update shortcut” 添加一些数据。 试着3Dtouch你的app，你将看到如下情景：</p>
+
+<p><img src="../content/images/2016/02/shortcuts_6-1.png" alt="shortcuts_6-1.png"></p>
+
+<p>有一个游戏，尝试改变值，按“更新的快捷方式”，它将改变。如果你离开了标题标签，并要求更新，那么该快捷方式将被删除。我们可以随时添加、删除、更改快捷方式。</p>
+
+<p>还有一件事情没有做了，就是当我们通过Dynamic shortcut来打开app的时候没有做任何事情。现在我们要添加alets，来展示如何做到这一点。</p>
+
+<p>以下时我们需要做的：
+添加 case Dynamic 到 DGShortcutItemType enumeration 来支持这种类型。
+在handleShortcutItem方法的switch语句中添加如下代码：</p>
+
+<pre><code class="language-Swift">case .Dynamic:  
+    alertController.message = "Dynamic shortcut works!"
+    break
+</code></pre>
+
+<p>在updateDynamicAction方法改变：
+NSBundle.mainBundle().bundleIdentifier! + ".Dynamic" 修改为DGShortcutItemType.Dynamic.type</p>
+
+<p>运行项目并测试3D touch。 当你打开app， 它将展示每一个shortcuts指定的消息。</p>
+
+<p>我想我们已经完成了Quick Actions 主要逻辑。本教程源码在这里（<a href="https://github.com/gontovnik/DGQuickActionsTutorial">here</a>）可以下载。</p>
+
+<p>希望大家喜欢，并留下你们的观点和建议。再见！</p>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../uipresentationcontroller/" title="link to UIPresentationController">UIPresentationController</a></h2>
+       <p class="excerpt">UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // prese…</p>
+       <div class="post-list__meta"><time datetime="18 2月 2016" class="post-list__meta--date date">18 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../uipresentationcontroller/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="10" data-title="如何添加 Quick actions" data-url="ioneway.github.io/ru-he-tian-jia-quick-actions/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2016  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=c7c2ea34c8"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=c7c2ea34c8"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
