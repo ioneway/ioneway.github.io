@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>CGRectInset 和 CGRectOffset</title>
+    <title>UIPresentationController</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -14,11 +14,11 @@
     <meta name="description" content="">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="CGRectInset 和 CGRectOffset">
+    <meta name="twitter:title" content="UIPresentationController">
     <meta name="twitter:description" content="">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CGRectInset 和 CGRectOffset">
+    <meta property="og:title" content="UIPresentationController">
     <meta property="og:description" content="">
 
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
@@ -34,16 +34,16 @@
     
     <meta property="og:site_name" content="iOneWay Blog">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CGRectInset 和 CGRectOffset">
-    <meta property="og:description" content="CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,...">
-    <meta property="og:url" content="http://localhost:2368/cgrectinset-he-cgrectoffset/">
-    <meta property="article:published_time" content="2016-02-17T08:32:50.508Z">
-    <meta property="article:modified_time" content="2016-02-17T09:55:47.594Z">
+    <meta property="og:title" content="UIPresentationController">
+    <meta property="og:description" content="UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // presentation(演示)起点的ViewController(只读属性)    public var presentingViewController: UIViewController { get } // 要展示的ViewController(只读属性)    public var presentedViewController: UIViewController { get } // 演示风格    public var presentationStyle: UIModalPresentationStyle { get } // presented和presenting ViewController的祖先视图。    public var containerView: UIView? { get } /* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是   presentedViewController....">
+    <meta property="og:url" content="http://localhost:2368/uipresentationcontroller/">
+    <meta property="article:published_time" content="2016-02-18T05:20:52.382Z">
+    <meta property="article:modified_time" content="2016-02-18T05:51:59.758Z">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="CGRectInset 和 CGRectOffset">
-    <meta name="twitter:description" content="CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,...">
-    <meta name="twitter:url" content="http://localhost:2368/cgrectinset-he-cgrectoffset/">
+    <meta name="twitter:title" content="UIPresentationController">
+    <meta name="twitter:description" content="UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // presentation(演示)起点的ViewController(只读属性)    public var presentingViewController: UIViewController { get } // 要展示的ViewController(只读属性)    public var presentedViewController: UIViewController { get } // 演示风格    public var presentationStyle: UIModalPresentationStyle { get } // presented和presenting ViewController的祖先视图。    public var containerView: UIView? { get } /* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是   presentedViewController....">
+    <meta name="twitter:url" content="http://localhost:2368/uipresentationcontroller/">
     
     <script type="application/ld+json">
 {
@@ -58,11 +58,11 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "CGRectInset 和 CGRectOffset",
-    "url": "http://localhost:2368/cgrectinset-he-cgrectoffset/",
-    "datePublished": "2016-02-17T08:32:50.508Z",
-    "dateModified": "2016-02-17T09:55:47.594Z",
-    "description": "CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect 返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。 参数： rect:原矩形.  dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄.  dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短. -(void)testCGRectInset   {       UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200,..."
+    "headline": "UIPresentationController",
+    "url": "http://localhost:2368/uipresentationcontroller/",
+    "datePublished": "2016-02-18T05:20:52.382Z",
+    "dateModified": "2016-02-18T05:51:59.758Z",
+    "description": "UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // presentation(演示)起点的ViewController(只读属性)    public var presentingViewController: UIViewController { get } // 要展示的ViewController(只读属性)    public var presentedViewController: UIViewController { get } // 演示风格    public var presentationStyle: UIModalPresentationStyle { get } // presented和presenting ViewController的祖先视图。    public var containerView: UIView? { get } /* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是   presentedViewController...."
 }
     </script>
 
@@ -167,101 +167,58 @@
 
     <header class="post-header">
       <div class="post-meta">
-        <time datetime="17 2月 2016" class="post-meta__date date">17 2月 2016</time> • <span class="post-meta__tags tags"></span>
+        <time datetime="18 2月 2016" class="post-meta__date date">18 2月 2016</time> • <span class="post-meta__tags tags"></span>
         <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
       </div>
-      <h1 class="post-title">CGRectInset 和 CGRectOffset</h1>
+      <h1 class="post-title">UIPresentationController</h1>
     </header>
 
     <section class="post">
-      <h3 id="cgrectinset">CGRectInset</h3>
+      <p><strong>UIPresentationController</strong>是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。</p>
 
-<pre><code> func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&gt; CGRect
+<h4 id=""><strong>重要属性及方法</strong></h4>
+
+<pre><code>// presentation(演示)起点的ViewController(只读属性)
+   public var presentingViewController: UIViewController { get }
+
+// 要展示的ViewController(只读属性)
+   public var presentedViewController: UIViewController { get }
+
+// 演示风格
+   public var presentationStyle: UIModalPresentationStyle { get }
+
+// presented和presenting ViewController的祖先视图。
+   public var containerView: UIView? { get }
+
+/* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是
+  presentedViewController.view本身.(默认值：presentedViewController.view本身)*/
+   public func presentedView() -&gt; UIView?
+
+// 展示动画开始时调用
+   public func presentationTransitionWillBegin()
+// 展示动画结束后调用
+   public func presentationTransitionDidEnd(completed: Bool)
+// 消失动画开始时调用
+   public func dismissalTransitionWillBegin()
+// 消失动画结束时调用
+   public func dismissalTransitionDidEnd(completed: Bool)
 </code></pre>
-
-<p>返回一个矩形，这个矩形以原矩形的中心点为中心，比原矩形大或者小。</p>
-
-<p>参数：<br>
-rect:原矩形. <br>
-dx:x坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形宽，指定负值则比原矩形窄. <br>
-dy:y坐标值用来调整原矩形。创建一个inset矩形，指定正值则比原矩形高，指定负值则比原矩形短.</p>
-
-<pre><code>-(void)testCGRectInset  
-{  
-    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
-    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
-    [self.view addSubview:view1];  
-
-    //根据view1的大小变换后创建view2;  
-    CGRect view2Rect=CGRectInset(view1.frame, 20, 20);  
-    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
-    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
-    [self.view addSubview:view2];  
-
-
-}  
-</code></pre>
-
-<p>如上代码：产生的效果如图：</p>
-
-<p><img src="../content/images/2016/02/20150731115650388.png" alt="CGRectInset"></p>
-
-<h3 id="cgrectoffset">CGRectOffset</h3>
-
-<p>返回一个经过平移后的矩形。(与原矩形大小一致)</p>
-
-<pre><code>func CGRectOffset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&gt; CGRect  
-</code></pre>
-
-<p>参数：<br>
-rect: 原矩形 <br>
-dx: 平移的x坐标 <br>
-dy: 平移的y坐标</p>
-
-<pre><code>-(void)testCGRectOffset  
-{  
-    UIView *view1=[[UIView alloc]initWithFrame:CGRectMake(120, 120, 200, 200)];  
-    [view1 setBackgroundColor:[UIColor grayColor]];//view1 设置为灰色  
-    [self.view addSubview:view1];  
-
-    //根据view1的大小变换后创建view2;  
-    CGRect view2Rect=CGRectOffset(view1.frame, 20, 20);  
-    UIView *view2=[[UIView alloc]initWithFrame:view2Rect];  
-    [view2 setBackgroundColor:[UIColor blueColor]];//view2 设置为蓝色  
-    [self.view addSubview:view2];    
-}  
-</code></pre>
-
-<p>
-以上代码运行效果图：</p>
-
-<p><img src="../content/images/2016/02/20150731120023106.png" alt="CGRectOffset"></p>
-
-<blockquote>
-  <p><strong>总结：</strong> CGRectInset主要是得到一个缩放了的矩形，而CGRectOffset是得到一个平移了的矩形。</p>
-</blockquote>
     </section>
 
   </article>
   
   <div class="read-more">
-   <div class="read-more-item read-more-item-left">
-       <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="../uipresentationcontroller/" title="link to UIPresentationController">UIPresentationController</a></h2>
-       <p class="excerpt">UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // prese…</p>
-       <div class="post-list__meta"><time datetime="18 2月 2016" class="post-list__meta--date date">18 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../uipresentationcontroller/">继续阅读</a></div>
-   </div>
    
    <div class="read-more-item read-more-item-right">
        <span class="read-more-item-dim">更早的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="../hit-testing-in-ios/" title="link to Hit-Testing in iOS">Hit-Testing in iOS</a></h2>
-       <p class="excerpt">Hit-testing翻译为中文是"命中测试"，是确定touch-point是否在一个View内的过程,最终命中的View被称为hit-test view。iOS使用hit-testing来确定那一个…</p>
-       <div class="post-list__meta"><time datetime="16 2月 2016" class="post-list__meta--date date">16 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../hit-testing-in-ios/">继续阅读</a></div>
+       <h2 class="post-list__post-title post-title"><a href="../cgrectinset-he-cgrectoffset/" title="link to CGRectInset 和 CGRectOffset">CGRectInset 和 CGRectOffset</a></h2>
+       <p class="excerpt">CGRectInset  func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&gt; CGRect 返回一个矩形，这个矩形…</p>
+       <div class="post-list__meta"><time datetime="17 2月 2016" class="post-list__meta--date date">17 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../cgrectinset-he-cgrectoffset/">继续阅读</a></div>
    </div>
 </div>
   
 <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="8" data-title="CGRectInset 和 CGRectOffset" data-url="ioneway.github.io/cgrectinset-he-cgrectoffset/"></div>
+	<div class="ds-thread" data-thread-key="9" data-title="UIPresentationController" data-url="ioneway.github.io/uipresentationcontroller/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->

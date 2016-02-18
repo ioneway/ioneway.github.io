@@ -1,4 +1,50 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 01:44:35 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>CGRectInset 和 CGRectOffset</title><description>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 05:53:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>UIPresentationController</title><description>&lt;p&gt;&lt;strong&gt;UIPresentationController&lt;/strong&gt;是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。&lt;/p&gt;
+
+&lt;h4 id=""&gt;&lt;strong&gt;重要属性及方法&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;// presentation(演示)起点的ViewController(只读属性)
+   public var presentingViewController: UIViewController { get }
+
+// 要展示的ViewController(只读属性)
+   public var presentedViewController: UIViewController { get }
+
+// 演示风格
+   public var presentationStyle: UIModalPresentationStyle { get }
+
+// presented和presenting ViewController的祖先视图。
+   public var containerView: UIView? { get }
+
+/* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是
+  presentedViewController.view本身.(默认值：presentedViewController.view本身)*/
+   public func presentedView() -&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/uipresentationcontroller/</link><guid isPermaLink="false">c6f29087-b69f-4708-8afe-0c4a576263ef</guid><dc:creator>ioneway</dc:creator><pubDate>Thu, 18 Feb 2016 05:20:52 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;UIPresentationController&lt;/strong&gt;是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。&lt;/p&gt;
+
+&lt;h4 id=""&gt;&lt;strong&gt;重要属性及方法&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;// presentation(演示)起点的ViewController(只读属性)
+   public var presentingViewController: UIViewController { get }
+
+// 要展示的ViewController(只读属性)
+   public var presentedViewController: UIViewController { get }
+
+// 演示风格
+   public var presentationStyle: UIModalPresentationStyle { get }
+
+// presented和presenting ViewController的祖先视图。
+   public var containerView: UIView? { get }
+
+/* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是
+  presentedViewController.view本身.(默认值：presentedViewController.view本身)*/
+   public func presentedView() -&amp;gt; UIView?
+
+// 展示动画开始时调用
+   public func presentationTransitionWillBegin()
+// 展示动画结束后调用
+   public func presentationTransitionDidEnd(completed: Bool)
+// 消失动画开始时调用
+   public func dismissalTransitionWillBegin()
+// 消失动画结束时调用
+   public func dismissalTransitionDidEnd(completed: Bool)
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>CGRectInset 和 CGRectOffset</title><description>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt; func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect
 &lt;/code&gt;&lt;/pre&gt;
