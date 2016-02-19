@@ -38,7 +38,7 @@
     <meta property="og:description" content="UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // presentation(演示)起点的ViewController(只读属性)    public var presentingViewController: UIViewController { get } // 要展示的ViewController(只读属性)    public var presentedViewController: UIViewController { get } // 演示风格    public var presentationStyle: UIModalPresentationStyle { get } // presented和presenting ViewController的祖先视图。    public var containerView: UIView? { get } /* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是   presentedViewController....">
     <meta property="og:url" content="http://localhost:2368/uipresentationcontroller/">
     <meta property="article:published_time" content="2016-02-18T05:20:52.382Z">
-    <meta property="article:modified_time" content="2016-02-18T05:58:25.776Z">
+    <meta property="article:modified_time" content="2016-02-18T07:49:58.526Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="UIPresentationController">
@@ -61,7 +61,7 @@
     "headline": "UIPresentationController",
     "url": "http://localhost:2368/uipresentationcontroller/",
     "datePublished": "2016-02-18T05:20:52.382Z",
-    "dateModified": "2016-02-18T05:58:25.776Z",
+    "dateModified": "2016-02-18T07:49:58.526Z",
     "description": "UIPresentationController是在iOS8.0后出现，用来提供高级视图切换功能, 使管理present ViewController的过程变得简单。 重要属性及方法 // presentation(演示)起点的ViewController(只读属性)    public var presentingViewController: UIViewController { get } // 要展示的ViewController(只读属性)    public var presentedViewController: UIViewController { get } // 演示风格    public var presentationStyle: UIModalPresentationStyle { get } // presented和presenting ViewController的祖先视图。    public var containerView: UIView? { get } /* presentation过程中的动画视图，必须是presentedViewController.view的祖先视图，或者是   presentedViewController...."
 }
     </script>
@@ -203,6 +203,11 @@
 // 消失动画结束时调用
    public func dismissalTransitionDidEnd(completed: Bool)
 </code></pre>
+
+<p>在iPad的设置页面，可以通过popOver弹出一个UIViewController，这个弹出的可以和用户交互的Controller叫做PresentedViewController，而后面那个被部分遮挡的UIViewController叫做PresentingViewController。<br>
+如图：</p>
+
+<p><img src="../content/images/2016/02/presentation.png" alt="presentation"></p>
     </section>
 
   </article>

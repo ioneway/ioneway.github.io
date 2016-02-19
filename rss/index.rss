@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 18 Feb 2016 06:59:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>iOS 7 SDK: 多任务的改进</title><description>&lt;p&gt;原文地址：&lt;a href="http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295"&gt;http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295&lt;/a&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 19 Feb 2016 04:13:51 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>iOS 7 SDK: 多任务的改进</title><description>&lt;p&gt;原文地址：&lt;a href="http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295"&gt;http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;这篇教程向我们介绍iOS7 SDK中多任务的改进，具体来说，你将了解到Background Fetch, Remote Notifications, 和Background Transfer Service APIs。&lt;/p&gt;
 
@@ -698,7 +698,12 @@ NSBundle.mainBundle().bundleIdentifier! + ".Dynamic" 修改为DGShortcutItemType
    public func dismissalTransitionWillBegin()
 // 消失动画结束时调用
    public func dismissalTransitionDidEnd(completed: Bool)
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>CGRectInset 和 CGRectOffset</title><description>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在iPad的设置页面，可以通过popOver弹出一个UIViewController，这个弹出的可以和用户交互的Controller叫做PresentedViewController，而后面那个被部分遮挡的UIViewController叫做PresentingViewController。&lt;br&gt;
+如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/02/presentation.png" alt="presentation"&gt;&lt;/p&gt;</content:encoded></item><item><title>CGRectInset 和 CGRectOffset</title><description>&lt;h3 id="cgrectinset"&gt;CGRectInset&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt; func CGRectInset(_ rect: CGRect, _ dx: CGFloat, _ dy: CGFloat) -&amp;gt; CGRect
 &lt;/code&gt;&lt;/pre&gt;
@@ -1184,17 +1189,18 @@ buster deploy  //发布
 
 &lt;p&gt;&lt;strong&gt;添加评论系统&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;ol&gt;
+&lt;ol&gt;
 &lt;li&gt;注册&lt;a href="http://duoshuo.com"&gt;多说&lt;/a&gt;帐号,点击“安装”按钮并填写相关设置;  &lt;/li&gt;
 &lt;li&gt;复制稳定版通用代码，黏贴在：&lt;code&gt;Ghost/content/themes/casper/post.hbs&lt;/code&gt;模板文件的 ｀｀&lt;code&gt;{{/post}}&lt;/code&gt; 标签前，并保存。 &lt;br&gt;
 如图：
-&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-22-43.png" alt="duoshuo_code"&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-22-43.png" alt="duoshuo_code"&gt;
+
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;code&gt;注意&lt;/code&gt;将其中中文字符分别替换为：&lt;code&gt;{{id}}&lt;/code&gt;， &lt;code&gt;{{title}}&lt;/code&gt;，&lt;code&gt;ioneway.github.io{{url}}&lt;/code&gt;. 其中&lt;code&gt;ioneway.github.io&lt;/code&gt;替换为你的域名。
-  
-  最终粘贴的代码如下：&lt;/p&gt;
-&lt;/blockquote&gt;
+  &lt;p&gt;&lt;code&gt;注意&lt;/code&gt;将其中中文字符分别替换为：&lt;code&gt;{{id}}&lt;/code&gt;， &lt;code&gt;{{title}}&lt;/code&gt;，&lt;code&gt;ioneway.github.io{{url}}&lt;/code&gt;. 其中&lt;code&gt;ioneway.github.io&lt;/code&gt;替换为你的域名。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  最终粘贴的代码如下：&lt;p&gt;&lt;/p&gt;
+
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;!-- 多说评论框 start --&amp;gt;  
     &amp;lt;div class="ds-thread" data-thread-key="{{id}}" data-title="{{title}}" data-url="ioneway.github.io{{url}}"&amp;gt;&amp;lt;/div&amp;gt;
@@ -1214,26 +1220,43 @@ var duoshuoQuery = {short_name:"abcbytr"};
 &amp;lt;!-- 多说公共JS代码 end --&amp;gt;  
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;登陆多说，进入设置页面，基本设置。正确填写以下两项：首页网址：&lt;a href="http://ioneway.github.io"&gt;http://ioneway.github.io&lt;/a&gt;
-，首选域名：选择最后一项：“将网址显示为ioneway.github.io”。保存。&lt;/p&gt;
 
-&lt;p&gt;如图：
-&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-41-14.png" alt="duoshuo_setting"&gt;&lt;/p&gt;
+ 登陆多说，进入设置页面，基本设置。正确填写以下两项：首页网址：&lt;a href="http://ioneway.github.io"&gt;http://ioneway.github.io&lt;/a&gt;
+，首选域名：选择最后一项：“将网址显示为ioneway.github.io”。保存。
 
-&lt;p&gt;&lt;strong&gt;2，添加 CNZZ 统计&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;1， 注册&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt; &lt;br&gt;
-2， 登陆&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt; &lt;code&gt;站点设置&lt;/code&gt;, &lt;code&gt;获取代码&lt;/code&gt; 选择其中一种，并复制代码 &lt;br&gt;
 如图：
-&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-54-11.png" alt="duoshuo_setting"&gt;&lt;/p&gt;
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-41-14.png" alt="duoshuo_setting"&gt;
 
-&lt;p&gt;3， 终端输入命令&lt;code&gt;npm start&lt;/code&gt;开启服务 &lt;br&gt;
-4， 浏览器输入&lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;进入后台管理。 &lt;br&gt;
-5. 点击左侧边栏：&lt;code&gt;插入代码&lt;/code&gt;，将复制的代码粘贴在&lt;code&gt;页脚&lt;/code&gt;框中，保存。&lt;/p&gt;
+**2，添加 CNZZ 统计**
 
-&lt;p&gt;至此，你的博客就有了基本完整的功能了，你可以登录多说和&lt;a href="http://www.cnzz.com"&gt;CNZZ&lt;/a&gt;管理你的站点。&lt;/p&gt;
+1， 注册[CNZZ](http://www.cnzz.com)  
+2， 登陆[CNZZ](http://www.cnzz.com) ```站点设置```, ```获取代码``` 选择其中一种，并复制代码  
+如图：
+&lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-54-11.png" alt="duoshuo_setting"&gt;
 
-&lt;p&gt;&lt;strong&gt;如有遗漏，欢迎指正。谢谢。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
+3， 终端输入命令```npm start```开启服务  
+4， 浏览器输入[http://localhost:2368/ghost](http://localhost:2368/ghost)进入后台管理。  
+5. 点击左侧边栏：```插入代码```，将复制的代码粘贴在```页脚```框中，保存。
+
+
+至此，你的博客就有了基本完整的功能了，你可以登录多说和[CNZZ](http://www.cnzz.com)管理你的站点。
+
+
+**如有遗漏，欢迎指正。谢谢。**
+
+
+
+&lt;h3 id=""&gt;&lt;strong&gt;使用中遇到的问题&lt;/strong&gt;&lt;/h3&gt;
+
+使用RSS阅读器：NewsBlur，遇到的问题：
+
+&lt;ol&gt;
+&lt;li&gt;搜索关键字"iOneWay"，无法搜索到我的博客RSS源地址。  &lt;/li&gt;
+&lt;li&gt;手动添加“&lt;a href="http://ioneway.github.io/rss/index.rss”后，在列表中不显示图标icon"&gt;http://ioneway.github.io/rss/index.rss”后，在列表中不显示图标icon&lt;/a&gt;.  &lt;/li&gt;
+&lt;li&gt;点击进去，阅读文章，发现文章中图片不显示。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;对RSS丝毫不懂，有哪位网友可以解答一下。&lt;/p&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
 
 &lt;h2 id=""&gt;快速入门&lt;/h2&gt;
 
