@@ -1,0 +1,375 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Swift 中Enums, Structs, Classes的理解</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 中Enums, Structs, Classes的理解">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 中Enums, Structs, Classes的理解">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=af7aaa8cab">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=af7aaa8cab">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 中Enums, Structs, Classes的理解">
+    <meta property="og:description" content='原文地址：https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift 回想只使用OC语言进行开发的时候，封装功能被限制在类中。然而，现在可以使用Swift进行开发，enums, structs和classes同样也具有了封装的功能。 这些类型和protocols结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。 本教程的目的是： 介绍一些enums,structs和classes的使用经验。 当你使用它们的时候，能帮你解决一些问题。 介绍他们是如何工作的。   在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。 概览 Swift最大的卖点是：safety, speed, simplicity。 Safety意味着你很难因为"不小心","不按常规","记忆不清"儿写出难以发现的bug。Swift使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。 此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。...'>
+    <meta property="og:url" content="http://localhost:2368/swift-zhong-enums-structs-classesde-li-jie/">
+    <meta property="article:published_time" content="2016-03-10T04:54:06.037Z">
+    <meta property="article:modified_time" content="2016-03-10T09:14:50.311Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 中Enums, Structs, Classes的理解">
+    <meta name="twitter:description" content='原文地址：https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift 回想只使用OC语言进行开发的时候，封装功能被限制在类中。然而，现在可以使用Swift进行开发，enums, structs和classes同样也具有了封装的功能。 这些类型和protocols结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。 本教程的目的是： 介绍一些enums,structs和classes的使用经验。 当你使用它们的时候，能帮你解决一些问题。 介绍他们是如何工作的。   在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。 概览 Swift最大的卖点是：safety, speed, simplicity。 Safety意味着你很难因为"不小心","不按常规","记忆不清"儿写出难以发现的bug。Swift使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。 此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。...'>
+    <meta name="twitter:url" content="http://localhost:2368/swift-zhong-enums-structs-classesde-li-jie/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Swift 中Enums, Structs, Classes的理解",
+    "url": "http://localhost:2368/swift-zhong-enums-structs-classesde-li-jie/",
+    "datePublished": "2016-03-10T04:54:06.037Z",
+    "dateModified": "2016-03-10T09:14:50.311Z",
+    "description": "原文地址：https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift 回想只使用OC语言进行开发的时候，封装功能被限制在类中。然而，现在可以使用Swift进行开发，enums, structs和classes同样也具有了封装的功能。 这些类型和protocols结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。 本教程的目的是： 介绍一些enums,structs和classes的使用经验。 当你使用它们的时候，能帮你解决一些问题。 介绍他们是如何工作的。   在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。 概览 Swift最大的卖点是：safety, speed, simplicity。 Safety意味着你很难因为&quot;不小心&quot;,&quot;不按常规&quot;,&quot;记忆不清&quot;儿写出难以发现的bug。Swift使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。 此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="10 3月 2016" class="post-meta__date date">10 3月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">Swift 中Enums, Structs, Classes的理解</h1>
+    </header>
+
+    <section class="post">
+      <p>原文地址：<a href="https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift">https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift</a></p>
+
+<p>回想只使用OC语言进行开发的时候，<code>封装</code>功能被限制在类中。然而，现在可以使用Swift进行开发，<code>enums</code>, <code>structs</code>和<code>classes</code>同样也具有了封装的功能。</p>
+
+<p>这些类型和<code>protocols</code>结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。</p>
+
+<p>本教程的目的是：</p>
+
+<ul>
+<li>介绍一些enums,structs和classes的使用经验。</li>
+<li>当你使用它们的时候，能帮你解决一些问题。</li>
+<li>介绍他们是如何工作的。</li>
+</ul>
+
+<blockquote>
+  <p>在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。</p>
+</blockquote>
+
+<h2 id="">概览</h2>
+
+<p><strong>Swift</strong>最大的卖点是：<code>safety</code>, <code>speed</code>, <code>simplicity</code>。</p>
+
+<p><strong>Safety</strong>意味着你很难因为"不小心","不按常规","记忆不清"儿写出难以发现的bug。<strong>Swift</strong>使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。</p>
+
+<p>此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。</p>
+
+<p><strong>Swift</strong>语言核心简单且高度正规化，它仅仅建立在很少量的几个核心概念之上。尽管它的规则相对简单，但是功能却十分强大。</p>
+
+<p>使其简单且功能强大的重要原因是Swift的类型系统<code>type system</code>
+<img src="../content/images/2016/03/types-700x195.png" alt="types system"></p>
+
+<p>Swift的类型系统十分强大，尽管它只有6种类型。它不像一些其它语言一样字面上拥有十多种类型，而Swift只有6种。</p>
+
+<p>四种组合类型：protocol, enum, struct, class. 两种复合类型：tuple, function.</p>
+
+<p>还有一些基础类型：Bool, Int, Uint, Float, Double, Character, String ,Array, Set, Dictionary, Optional, 等。然而，这些类型都来自标准库。</p>
+
+<p>本教程以model types为基础的组合类型enum, struct和class为重点。</p>
+
+<h1 id="">开始</h1>
+
+<p>创建一个playground项目并命名为<strong>Shapes</strong>,选择平台为OS X.清除现有代码，并加入以下代码：</p>
+
+<pre><code>import Foundation  
+</code></pre>
+
+<p>使用字符串虽然简单，但是也有一些重要的缺陷：</p>
+
+<ol>
+<li>容易出错。任何不属于颜色规格的字符串都会正常编译，但是在运行时报错。  </li>
+<li>Autocomplete不能正确的帮助你检测颜色名称。  </li>
+<li>当你传递一个颜色字符串参数时，它可能不能明确的表明这是一个代表颜色的字符串。</li>
+</ol>
+
+<h3 id="">使用枚举来解决</h3>
+
+<p>使用自定义类型来解决这些问题。如果你来自Cocoa Touch，你可能想实现一个封装的类像UIColor。而Swift提供给您更多的选择来定义您的模型。</p>
+
+<p>在实现这个功能之前，先让我们想想如何实现颜色enum，你可能会想到用以下代码来实现：</p>
+
+<pre><code>enum ColorName {  
+  case Black
+  case Silver
+  case Gray
+  case White
+  case Maroon
+  case Red
+  // ... and so on ... 
+}
+</code></pre>
+
+<p>以上方式十分类似于C-style enums.然而，Swift允许你指定一个类型来表示每一个case。当然，被指定的类型必须遵守RawRepresentable协议。</p>
+
+<p>所以你可以如下创建颜色枚举，并为每一个case赋值:</p>
+
+<pre><code>enum ColorName : String {  
+  case Black  = "Black"
+  case Silver = "Silver"
+  case Gray   = "Gray"
+  case White  = "White"
+  case Maroon = "Maroon"
+  case Red    = "Red"
+  // ... and so on ... 
+}
+</code></pre>
+
+<p>Swift在使用字符串作为枚举值的时候有其特殊性。如果你没有制定case的值，那么编译器会自动为其赋值，值为case的名称。这意味着你可以像下面这样写：  </p>
+
+<pre><code>enum ColorName : String {  
+  case Black
+  case Silver
+  case Gray
+  case White
+  case Maroon
+  case Red
+  // ... and so on ... 
+}
+</code></pre>
+
+<p>你可以通过只写一次<code>case</code>并使用逗号来分割case来简化enum。</p>
+
+<pre><code>enum ColorName : String {  
+  case Black, Silver, Gray, White, Maroon, Red, Purple, Fuchsia, Green, Lime, Olive, Yellow, Navy, Blue, Teal, Aqua
+}
+</code></pre>
+
+<p>现在你在对于使用字符串来表示颜色所遇到的问题就解决了：</p>
+
+<pre><code>let fill = ColorName.Grey   // ERROR: Misspelled color names won't compile. Good!  
+let fill = ColorName.Gray   // Correct names autocomplete and compile. Yay!  
+</code></pre>
+
+<h3 id="associatedvalues">关联值(Associated Values)</h3>
+
+<p><strong>ColorName</strong>是命名Color的model。但是如果你希望像CSS中的那样可以有多种表现形式：名称，RGB, HSL 等等。如何为他们建模呢？</p>
+
+<p>Swift中Enum对于建模十分强大，可以表现各种东西，如：CSS颜色，并且这些enum case与他们的值相关联。这些值成为关联值<code>(Associated Values)</code></p>
+
+<p>使用enum来定义<strong>CSSColor</strong>，向playground添加如下代码：</p>
+
+<pre><code>enum CSSColor {  
+  case Named(ColorName)
+  case RGB(UInt8, UInt8, UInt8)
+}
+</code></pre>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   <div class="read-more-item read-more-item-left">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../swift-chu-shi-hua-qi/" title="link to Swift 初始化器">Swift 初始化器</a></h2>
+       <p class="excerpt">Swift初始化器有两种：指定初始化器(Designated Initializer)和便利初始化器(Convenience Initializer).  指定初始化器 指定初始化器是类的最主要的初始…</p>
+       <div class="post-list__meta"><time datetime="15 3月 2016" class="post-list__meta--date date">15 3月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../swift-chu-shi-hua-qi/">继续阅读</a></div>
+   </div>
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../ios-7-sdk-duo-ren-wu-de-gai-jin/" title="link to iOS 7 SDK: 多任务的改进">iOS 7 SDK: 多任务的改进</a></h2>
+       <p class="excerpt">原文地址：http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295 这篇教程向我们介绍i…</p>
+       <div class="post-list__meta"><time datetime="18 2月 2016" class="post-list__meta--date date">18 2月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../ios-7-sdk-duo-ren-wu-de-gai-jin/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="13" data-title="Swift 中Enums, Structs, Classes的理解" data-url="ioneway.github.io/swift-zhong-enums-structs-classesde-li-jie/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2017  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: '你的 GitHub ID',
+  repo: '存储评论的 repo',
+  oauth: {
+    client_id: '你的 client ID',
+    client_secret: '你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=af7aaa8cab"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=af7aaa8cab"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>

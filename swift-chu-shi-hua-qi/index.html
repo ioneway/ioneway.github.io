@@ -1,0 +1,275 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Swift 初始化器</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 初始化器">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 初始化器">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=af7aaa8cab">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=af7aaa8cab">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 初始化器">
+    <meta property="og:description" content="Swift初始化器有两种：指定初始化器(Designated Initializer)和便利初始化器(Convenience Initializer).  指定初始化器 指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的指定初始化器去初始化它们各自引入的属性。类有且至少要有一个指定初始化器。 便利初始化器 便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。一个类可以没有便利初始化器。 初始化器之间的相互调用关系，必须遵守一下原则： 指定初始化器必须调用其父类的指定初始化器 便利初始化器必须调用该类中另一个初始化器 便利初始化器最终必须调用一个指定初始化器   简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。 如图：...">
+    <meta property="og:url" content="http://localhost:2368/swift-chu-shi-hua-qi/">
+    <meta property="article:published_time" content="2016-03-15T05:20:36.080Z">
+    <meta property="article:modified_time" content="2016-03-15T08:51:01.417Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 初始化器">
+    <meta name="twitter:description" content="Swift初始化器有两种：指定初始化器(Designated Initializer)和便利初始化器(Convenience Initializer).  指定初始化器 指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的指定初始化器去初始化它们各自引入的属性。类有且至少要有一个指定初始化器。 便利初始化器 便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。一个类可以没有便利初始化器。 初始化器之间的相互调用关系，必须遵守一下原则： 指定初始化器必须调用其父类的指定初始化器 便利初始化器必须调用该类中另一个初始化器 便利初始化器最终必须调用一个指定初始化器   简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。 如图：...">
+    <meta name="twitter:url" content="http://localhost:2368/swift-chu-shi-hua-qi/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Swift 初始化器",
+    "url": "http://localhost:2368/swift-chu-shi-hua-qi/",
+    "datePublished": "2016-03-15T05:20:36.080Z",
+    "dateModified": "2016-03-15T08:51:01.417Z",
+    "description": "Swift初始化器有两种：指定初始化器(Designated Initializer)和便利初始化器(Convenience Initializer).  指定初始化器 指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的指定初始化器去初始化它们各自引入的属性。类有且至少要有一个指定初始化器。 便利初始化器 便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。一个类可以没有便利初始化器。 初始化器之间的相互调用关系，必须遵守一下原则： 指定初始化器必须调用其父类的指定初始化器 便利初始化器必须调用该类中另一个初始化器 便利初始化器最终必须调用一个指定初始化器   简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。 如图：..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="15 3月 2016" class="post-meta__date date">15 3月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">Swift 初始化器</h1>
+    </header>
+
+    <section class="post">
+      <p>Swift初始化器有两种：指定初始化器<code>(Designated Initializer)</code>和便利初始化器<code>(Convenience Initializer)</code>. </p>
+
+<h4 id="designatedinitializer">指定初始化器<designated initializer></designated></h4>
+
+<p>指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的<strong>指定初始化器</strong>去初始化它们各自引入的属性。<u style="color:red"><b>类有且至少要有一个指定初始化器</b></u>。</p>
+
+<h4 id="convenienceinitializer">便利初始化器<convenience initializer></convenience></h4>
+
+<p>便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。<u style="color:red"><b>一个类可以没有便利初始化器</b></u>。</p>
+
+<p>初始化器之间的相互调用关系，必须遵守一下原则：</p>
+
+<ul>
+<li><b style="color:red">指定初始化器必须调用其父类的指定初始化器</b></li>
+<li><b style="color:red">便利初始化器必须调用该类中另一个初始化器</b></li>
+<li><b style="color:red">便利初始化器最终必须调用一个指定初始化器</b></li>
+</ul>
+
+<blockquote>
+  <p>简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。</p>
+</blockquote>
+
+<p>如图：</p>
+
+<p><img src="../content/images/2016/03/init__use.png" alt="init_use"></p>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   <div class="read-more-item read-more-item-left">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../swift-si-kao-yi/" title="link to Swift 最佳实践（一）">Swift 最佳实践（一）</a></h2>
+       <p class="excerpt">Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发…</p>
+       <div class="post-list__meta"><time datetime="23 3月 2016" class="post-list__meta--date date">23 3月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../swift-si-kao-yi/">继续阅读</a></div>
+   </div>
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../swift-zhong-enums-structs-classesde-li-jie/" title="link to Swift 中Enums, Structs, Classes的理解">Swift 中Enums, Structs, Classes的理解</a></h2>
+       <p class="excerpt">原文地址：https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift 回想只使用OC语言进行开发的时候，封装功能被限…</p>
+       <div class="post-list__meta"><time datetime="10 3月 2016" class="post-list__meta--date date">10 3月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../swift-zhong-enums-structs-classesde-li-jie/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="14" data-title="Swift 初始化器" data-url="ioneway.github.io/swift-chu-shi-hua-qi/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2017  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: '你的 GitHub ID',
+  repo: '存储评论的 repo',
+  oauth: {
+    client_id: '你的 client ID',
+    client_secret: '你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=af7aaa8cab"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=af7aaa8cab"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>

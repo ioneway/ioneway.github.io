@@ -1,0 +1,302 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Swift中的map, filter, reduce 函数</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift中的map, filter, reduce 函数">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift中的map, filter, reduce 函数">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=af7aaa8cab">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=af7aaa8cab">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift中的map, filter, reduce 函数">
+    <meta property="og:description" content="Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。   高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。 map函数 map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。  map函数是CollectionType协议中定义的方法：  public func map&amp;lt;T&amp;gt;(@noescape transform: (Self.Generator.Element) throws -&amp;gt; T) rethrows -&amp;gt; [T] 该定义是一个泛型定义。 @noescape：用于解除闭包的循环引用，类似[weak self]...">
+    <meta property="og:url" content="http://localhost:2368/swiftzhong-de-map-filter-reduce-han-shu/">
+    <meta property="article:published_time" content="2016-04-07T13:55:34.725Z">
+    <meta property="article:modified_time" content="2016-04-07T14:02:49.593Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift中的map, filter, reduce 函数">
+    <meta name="twitter:description" content="Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。   高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。 map函数 map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。  map函数是CollectionType协议中定义的方法：  public func map&amp;lt;T&amp;gt;(@noescape transform: (Self.Generator.Element) throws -&amp;gt; T) rethrows -&amp;gt; [T] 该定义是一个泛型定义。 @noescape：用于解除闭包的循环引用，类似[weak self]...">
+    <meta name="twitter:url" content="http://localhost:2368/swiftzhong-de-map-filter-reduce-han-shu/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Swift中的map, filter, reduce 函数",
+    "url": "http://localhost:2368/swiftzhong-de-map-filter-reduce-han-shu/",
+    "datePublished": "2016-04-07T13:55:34.725Z",
+    "dateModified": "2016-04-07T14:02:49.593Z",
+    "description": "Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。   高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。 map函数 map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。  map函数是CollectionType协议中定义的方法：  public func map&amp;lt;T&amp;gt;(@noescape transform: (Self.Generator.Element) throws -&amp;gt; T) rethrows -&amp;gt; [T] 该定义是一个泛型定义。 @noescape：用于解除闭包的循环引用，类似[weak self]..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="07 4月 2016" class="post-meta__date date">07 4月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">Swift中的map, filter, reduce 函数</h1>
+    </header>
+
+    <section class="post">
+      <p>Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。</p>
+
+<blockquote>
+  <p>高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。</p>
+</blockquote>
+
+<h3 id="map">map函数</h3>
+
+<p>map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。 <br>
+map函数是CollectionType协议中定义的方法： <br>
+<code>public func map&lt;T&gt;(@noescape transform: (Self.Generator.Element) throws -&gt; T) rethrows -&gt; [T]</code></p>
+
+<p>该定义是一个泛型定义。</p>
+
+<p>@noescape：用于解除闭包的循环引用，类似[weak self], 但是@noescape不能用于可选类型，因为可选类型实际上是enum，而非closure。 </p>
+
+<p>Generator.Element 是一个泛型定义，Element代表数组中的类型，它既可以是Int也可以是String等。像是对该泛型起了一个固定的名称叫：Element，而我们通常自定义泛型多喜欢用T。</p>
+
+<p>以下是Generator的定义</p>
+
+<pre><code>public protocol GeneratorType {  
+    /// The type of element generated by `self`.
+    associatedtype Element
+    /// Advance to the next element and return it, or `nil` if no next
+    /// element exists.
+    ///
+    /// - Requires: `next()` has not been applied to a copy of `self`
+    ///   since the copy was made, and no preceding call to `self.next()`
+    ///   has returned `nil`.  Specific implementations of this protocol
+    ///   are encouraged to respond to violations of this requirement by
+    ///   calling `preconditionFailure("...")`.
+    @warn_unused_result
+    public mutating func next() -&gt; Self.Element?
+}
+</code></pre>
+
+<p>我门尝试着自己实现map函数：</p>
+
+<pre><code>//该实现不带有异常处理
+func map&lt;T&gt;(transform: Element -&gt; T) -&gt; [T] {  
+    var result: [T] = []
+    for item in self {
+      result.append(transform(item))
+    }
+    return result
+  }
+
+//调用方式：
+[1, 2, 3].map { (x) -&gt; Int in
+  return x + 1
+}
+</code></pre>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   <div class="read-more-item read-more-item-left">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../swift-guan-jian-zi-noescape-2/" title="link to Swift 关键字：@noescape">Swift 关键字：@noescape</a></h2>
+       <p class="excerpt">Swift1.2发布时就已经有这个关键字了。正确使用它可以使我们避免许多不希望的保留环。 @noescape主要用在对函数中的closure参数修饰。 使用@noescape修饰closure后，cl…</p>
+       <div class="post-list__meta"><time datetime="09 4月 2016" class="post-list__meta--date date">09 4月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../swift-guan-jian-zi-noescape-2/">继续阅读</a></div>
+   </div>
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../shell-jiao-ben-xue-xi/" title="link to Shell 脚本学习（－）">Shell 脚本学习（－）</a></h2>
+       <p class="excerpt">公司一位同事要离职，结果领导就把他负责的一些自动化工作交给我了，说是因为其他的同事都不懂shell，可是我也不懂啊。哎，很无奈，既然任务领导已经决定将任务交给我，那就是对我的信任。就这样对自己安慰着。…</p>
+       <div class="post-list__meta"><time datetime="02 4月 2016" class="post-list__meta--date date">02 4月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../shell-jiao-ben-xue-xi/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="18" data-title="Swift中的map, filter, reduce 函数" data-url="ioneway.github.io/swiftzhong-de-map-filter-reduce-han-shu/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2017  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: '你的 GitHub ID',
+  repo: '存储评论的 repo',
+  oauth: {
+    client_id: '你的 client ID',
+    client_secret: '你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=af7aaa8cab"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=af7aaa8cab"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>

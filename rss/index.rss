@@ -1,4 +1,746 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 19 Feb 2016 04:13:51 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>iOS 7 SDK: 多任务的改进</title><description>&lt;p&gt;原文地址：&lt;a href="http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295"&gt;http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295&lt;/a&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>iOneWay Blog</title><description>QQ:373850874. 欢迎加入。</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 15 Sep 2017 15:21:13 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>UIScrollView常用属性</title><description>&lt;p&gt;1，设置内容区域大小  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentSize = CGSizeMake(500, 600);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2, 设置内容区域偏移量&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentOffset = CGPointMake(300, 0);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3, 设置内容区域相对于frame在哪里显示  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentInset = UIEdgeInsetsMake(100, 100, 0, 0);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4， 关闭滑动的回弹效果  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.bounces = NO;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5, 设置点击状态栏，scrollView能否滑动最顶端  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.scrollsToTop = YES;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;6, 设置scrollView是否可以整屏滑动(一次滑动整个scrollView的大小)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.pagingEnabled = YES;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;7, 设置最大缩放比例：  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.maximumZoomScale = 4.0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;8, 设置最小缩放比例  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.minimumZoomScale&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/uiscrollviewhong-fa-ji-zhi/</link><guid isPermaLink="false">45483093-2077-49c8-a4c4-b408eb8c5676</guid><dc:creator>ioneway</dc:creator><pubDate>Sun, 10 Apr 2016 09:00:07 GMT</pubDate><content:encoded>&lt;p&gt;1，设置内容区域大小  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentSize = CGSizeMake(500, 600);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2, 设置内容区域偏移量&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentOffset = CGPointMake(300, 0);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3, 设置内容区域相对于frame在哪里显示  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.contentInset = UIEdgeInsetsMake(100, 100, 0, 0);  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4， 关闭滑动的回弹效果  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.bounces = NO;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5, 设置点击状态栏，scrollView能否滑动最顶端  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.scrollsToTop = YES;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;6, 设置scrollView是否可以整屏滑动(一次滑动整个scrollView的大小)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.pagingEnabled = YES;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;7, 设置最大缩放比例：  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.maximumZoomScale = 4.0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;8, 设置最小缩放比例  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scrollView.minimumZoomScale = 1.0;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="uiscrollviewdelegate"&gt;UIScrollViewDelegate的触发机制&lt;/h4&gt;
+
+&lt;p&gt;1, 只要ScrollView有滑动(不管是拖，拉，放大，缩小都导致)都会执行，且不止执行一次  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2, 将要拖曳scrollView时触发，手指接触ScrollView并且将要滑动时触发。  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewBeginDragging:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3, 结束拖曳时触发(手指停止拖曳并将要离开屏幕)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContrentOffset 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4,结束拖曳时触发(手指已经离开屏幕)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5, 当scrollView滑动将要减速时触发(将要停止)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;6, 当scrollView 结束减速时触发(停止滑动)  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollVIew
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;7, 当设置scrollView,有一个动画效果时触发  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;8, 设置要缩放的scrollView上面的哪一个子视图，只能时子视图，不能时scrollview本身。  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;9，当将要开始缩放时触发  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;10, 当结束缩放时触发  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;11, 只有当scrollToTop＝YES时，该方法才回触发，进一步询问点击状态栏是否有效  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;12, 当点击状态栏并且scrollView滑动到顶端时触发  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Swift 关键字：@noescape</title><description>&lt;p&gt;Swift1.2发布时就已经有这个关键字了。正确使用它可以使我们避免许多不希望的保留环。&lt;/p&gt;
+
+&lt;p&gt;@noescape主要用在对函数中的closure参数修饰。&lt;/p&gt;
+
+&lt;p&gt;使用@noescape修饰closure后，clousure的生命周期要比函数的调用周期短，也就是说clousure不能随意在函数外调用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@noescape使用注意点:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;别修饰的clousure不能用于asynchronously(异步)  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt; class A1 {
+        func async(@noescape code:() -&amp;gt; ()) -&amp;gt; Void {
+/*报错：error: invalid conversion from non-escaping function of type '@noescape () -&amp;gt; ()' to potentially  escaping function type 'dispatch_block_t' (aka '@convention(block) () -&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/swift-guan-jian-zi-noescape-2/</link><guid isPermaLink="false">d4fc10b6-13a7-484f-9b99-a31d38367650</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 09 Apr 2016 04:58:46 GMT</pubDate><content:encoded>&lt;p&gt;Swift1.2发布时就已经有这个关键字了。正确使用它可以使我们避免许多不希望的保留环。&lt;/p&gt;
+
+&lt;p&gt;@noescape主要用在对函数中的closure参数修饰。&lt;/p&gt;
+
+&lt;p&gt;使用@noescape修饰closure后，clousure的生命周期要比函数的调用周期短，也就是说clousure不能随意在函数外调用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@noescape使用注意点:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;别修饰的clousure不能用于asynchronously(异步)  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt; class A1 {
+        func async(@noescape code:() -&amp;gt; ()) -&amp;gt; Void {
+/*报错：error: invalid conversion from non-escaping function of type '@noescape () -&amp;gt; ()' to potentially  escaping function type 'dispatch_block_t' (aka '@convention(block) () -&amp;gt; ()')*/
+            dispatch_async(dispatch_get_main_queue(), code); 
+
+        }
+    }
+
+ class A2 {
+        func async(@noescape code:() -&amp;gt; ()) -&amp;gt; Void {
+            dispatch_async(dispatch_get_main_queue(), code);
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;不能进行存储赋给另一个closure变量  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;class A1 {  
+        func async(@noescape code:() -&amp;gt; ()) -&amp;gt; Void {
+            let codeConst:()-&amp;gt;() = code;
+            codeConst()
+        }
+    }
+
+    class A2 {
+        func async(code:() -&amp;gt; ()) -&amp;gt; Void {
+            let codeConst:()-&amp;gt;() = code;
+            codeConst()
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;不能在另一个非@noescape closure中进行捕获  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;    class A9 {
+        func capture(@noescape code: ()-&amp;gt;()) -&amp;gt; Void {
+            let captured = {
+                code()
+            }
+            captured()
+        }
+    }
+
+    class A10 {
+        func capture(code: ()-&amp;gt;()) -&amp;gt; Void {
+            let captured = {
+                code()
+            }
+            captured()
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;在对所属class或者strutt的其他属性或函数进行操作时无需加&lt;code&gt;self.&lt;/code&gt;  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;class A4{  
+    var b: (Void -&amp;gt; Void)!
+    var k = 0//用来调用的  
+    func aa(@noescape a: (Void-&amp;gt;Void)){
+        a()
+    }
+    func bb(){
+        aa {
+            () -&amp;gt; Void in
+            k = 1//一般的closure都是要self.k = 1,@noescape则不需要
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=""&gt;总结&lt;/h4&gt;
+
+&lt;p&gt;@noescape限制了closure的使用范围，当你确定该closure不会在函数外调用时，则最好加上@noescape修饰符，这样可以带来一些性能的提升。同时在引用属性或其他方法时无需加&lt;code&gt;self.&lt;/code&gt;,也避免了循环引用的问题。&lt;/p&gt;</content:encoded></item><item><title>Swift中的map, filter, reduce 函数</title><description>&lt;p&gt;Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="map"&gt;map函数&lt;/h3&gt;
+
+&lt;p&gt;map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。 &lt;br&gt;
+map函数是CollectionType协议中定义的方法： &lt;br&gt;
+&lt;code&gt;public func map&amp;lt;T&amp;gt;(@noescape transform: (Self.Generator.Element) throws -&amp;gt; T) rethrows -&amp;gt; [T]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;该定义是一个泛型定义。&lt;/p&gt;
+
+&lt;p&gt;@noescape：用于解除闭包的循环引用，类似[weak self], 但是@noescape不能用于可选类型，因为可选类型实际上是enum，而非closure。 &lt;/p&gt;
+
+&lt;p&gt;Generator.Element 是一个泛型定义，Element代表数组中的类型，它既可以是Int也可以是String等。像是对该泛型起了一个固定的名称叫：&lt;/p&gt;</description><link>http://localhost:2368/swiftzhong-de-map-filter-reduce-han-shu/</link><guid isPermaLink="false">e6f27f98-5da0-4bc7-8f3b-850ab727b5bd</guid><dc:creator>ioneway</dc:creator><pubDate>Thu, 07 Apr 2016 13:55:34 GMT</pubDate><content:encoded>&lt;p&gt;Swift中Array支持三个高阶函数，map, filter和reduce。对于我们对数组进行操作带来了很大的方便。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;高阶函数的定义：满足以下两点其一即为高阶函数：1，接受一个或者多个函数作为输入；2，输出一个函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="map"&gt;map函数&lt;/h3&gt;
+
+&lt;p&gt;map函数的作用：对某一个数组中的元素进行转换，然后产生一个新的数组。 &lt;br&gt;
+map函数是CollectionType协议中定义的方法： &lt;br&gt;
+&lt;code&gt;public func map&amp;lt;T&amp;gt;(@noescape transform: (Self.Generator.Element) throws -&amp;gt; T) rethrows -&amp;gt; [T]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;该定义是一个泛型定义。&lt;/p&gt;
+
+&lt;p&gt;@noescape：用于解除闭包的循环引用，类似[weak self], 但是@noescape不能用于可选类型，因为可选类型实际上是enum，而非closure。 &lt;/p&gt;
+
+&lt;p&gt;Generator.Element 是一个泛型定义，Element代表数组中的类型，它既可以是Int也可以是String等。像是对该泛型起了一个固定的名称叫：Element，而我们通常自定义泛型多喜欢用T。&lt;/p&gt;
+
+&lt;p&gt;以下是Generator的定义&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public protocol GeneratorType {  
+    /// The type of element generated by `self`.
+    associatedtype Element
+    /// Advance to the next element and return it, or `nil` if no next
+    /// element exists.
+    ///
+    /// - Requires: `next()` has not been applied to a copy of `self`
+    ///   since the copy was made, and no preceding call to `self.next()`
+    ///   has returned `nil`.  Specific implementations of this protocol
+    ///   are encouraged to respond to violations of this requirement by
+    ///   calling `preconditionFailure("...")`.
+    @warn_unused_result
+    public mutating func next() -&amp;gt; Self.Element?
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我门尝试着自己实现map函数：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//该实现不带有异常处理
+func map&amp;lt;T&amp;gt;(transform: Element -&amp;gt; T) -&amp;gt; [T] {  
+    var result: [T] = []
+    for item in self {
+      result.append(transform(item))
+    }
+    return result
+  }
+
+//调用方式：
+[1, 2, 3].map { (x) -&amp;gt; Int in
+  return x + 1
+}
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Shell 脚本学习（－）</title><description>&lt;p&gt;公司一位同事要离职，结果领导就把他负责的一些自动化工作交给我了，说是因为其他的同事都不懂shell，可是我也不懂啊。哎，很无奈，既然任务领导已经决定将任务交给我，那就是对我的信任。就这样对自己安慰着。默默的下载了一本shell入门书籍《Shell脚本学习指南》，先从基础慢慢学着，希望他走之前我可以胜任这份工作。&lt;/p&gt;
+
+&lt;p&gt;废话不多说了，总结一下今天对shell的学习成果。&lt;/p&gt;
+
+&lt;p&gt;shell脚本是一种解释型语言，它有以下优势：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;简单性&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+shell可以简洁的表达复杂的操作。  &lt;/li&gt;
+&lt;li&gt;可移植性&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+使用POSIX所定义的功能可以无须修改就可以运行在其他系统上。&lt;/li&gt;
+&lt;li&gt;开发容易&amp;nbsp;&amp;nbsp;&amp;nbsp;
+可以在短时间内完成一个功能强大的好用脚本。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;shell识别4种基本命令：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;内建命令(build-in)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;内建命令就是由shell本身所执行的命令。一般执行效率较高。例如：read, test, cd, echo, printf等都属于内建命令。  &lt;/li&gt;
+&lt;li&gt;shell 函数&lt;br&gt;&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/shell-jiao-ben-xue-xi/</link><guid isPermaLink="false">00f5fb6b-f5d0-4114-97ea-e5ca9a15fdf6</guid><dc:creator>ioneway</dc:creator><pubDate>Sat, 02 Apr 2016 03:50:10 GMT</pubDate><content:encoded>&lt;p&gt;公司一位同事要离职，结果领导就把他负责的一些自动化工作交给我了，说是因为其他的同事都不懂shell，可是我也不懂啊。哎，很无奈，既然任务领导已经决定将任务交给我，那就是对我的信任。就这样对自己安慰着。默默的下载了一本shell入门书籍《Shell脚本学习指南》，先从基础慢慢学着，希望他走之前我可以胜任这份工作。&lt;/p&gt;
+
+&lt;p&gt;废话不多说了，总结一下今天对shell的学习成果。&lt;/p&gt;
+
+&lt;p&gt;shell脚本是一种解释型语言，它有以下优势：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;简单性&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+shell可以简洁的表达复杂的操作。  &lt;/li&gt;
+&lt;li&gt;可移植性&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+使用POSIX所定义的功能可以无须修改就可以运行在其他系统上。&lt;/li&gt;
+&lt;li&gt;开发容易&amp;nbsp;&amp;nbsp;&amp;nbsp;
+可以在短时间内完成一个功能强大的好用脚本。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;shell识别4种基本命令：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;内建命令(build-in)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;内建命令就是由shell本身所执行的命令。一般执行效率较高。例如：read, test, cd, echo, printf等都属于内建命令。  &lt;/li&gt;
+&lt;li&gt;shell 函数&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;shell函数是功能健全的一系列程序代码，可以像命令一样引用执行。  &lt;/li&gt;
+&lt;li&gt;外部命令&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;外部命令由shell的副本&amp;lt;新的进程&gt;所执行的命令；  &lt;/li&gt;
+&lt;li&gt;系统命令&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;系统命令也属于外部命令，只是系统内部包含而已。有不少系统命令与内建命令名称相同，功能也大体相同。但是效率低于内建命令。例如：echo命令与/bin/echo是两个不同的命令，前者为内建命令，后者为系统命令。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;其中系统命令也属于外部命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=""&gt;内建命令与外部命令&lt;/h3&gt;
+
+&lt;p&gt;内建命令指bash(或者其他版本)工具集中的命令。一般有shell直接执行，不需要产生子进程执行。&lt;/p&gt;
+
+&lt;p&gt;外部命令和系统命令：需要fork出一个子进程执行。&lt;/p&gt;
+
+&lt;h3 id=""&gt;外部命令执行过程&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;建立一个新的进程。此进程即为shell的一个副本。&lt;/li&gt;
+&lt;li&gt;在新的进程里，在PATH变量内所列出的目录中，寻找特定的命令。/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin为PATH的变量典型的默认值。&lt;/li&gt;
+&lt;li&gt;fork一个新的进程取代现有shell进程执行&lt;/li&gt;
+&lt;li&gt;程序完成后，最初的shell父进程回接着从终端读取下一条命了，或执行脚本里的下一条命令。
+如图&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/04/shell_1_0-1.png" alt=""&gt;&lt;/p&gt;
+
+&lt;h3 id=""&gt;学习到的几个命令&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;type&lt;/code&gt;：打印命令类型&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-Shell"&gt;type echo  
+#cd is a shell builtin, cd是内建命令
+type /bin/echo  
+#/bin/echo is /bin/echo, /bin/echo是系统命令
+type -a echo  
+#echo is a shell builtin
+#echo is /bin/echo
+#echo命令有两个，一个是内建，一个是系统命令
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=""&gt;命令的组成部分&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;命令名称 &lt;br&gt;
+ 命令的第一项，必须有。&lt;/li&gt;
+&lt;li&gt;选项 &lt;br&gt;
+ 选项的开头一般是一个'-'号开头，后跟一个字母。选项并非必须，可有可无。选项有长选项，开头会包含一个或者两个'-'符号，具体由命令本身决定。选项后若无参数可以与其他选项合并。如:&lt;code&gt;ls -lt file.c&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;参数 &lt;br&gt;
+ 一般跟在选项之后，并非必须，可有可无。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=""&gt;命令分隔符&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;多个命令可以写在一行，命令之间需要有';'分号隔开，按序执行，前一个命令执行完毕后再执行下一个命令。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果一行中多个命令使用'&amp;amp;'隔开，则shell会在后台执行'&amp;amp;'前的命令，而无需等待期前的命令执行完毕即可直接执行后面的命令。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title>隐藏NavigationBar下边线</title><description>&lt;p&gt;有些app需要将NavigationBar的下边线隐藏，从而使得页面看起导航条和下面的页面融为一体。&lt;/p&gt;
+
+&lt;h2 id="view"&gt;寻找下边线View视图&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;- (UIImageView*)bottomLineView:(UIView*)view {
+
+    if([view isKindOfClass:UIImageView.class] &amp;amp;&amp;amp; view.bounds.size.height&amp;lt;=1.0) {
+        return(UIImageView*)view;
+    }
+    for(UIView*subview in view.subviews) {
+        UIImageView*imageView = [self bottomLineView:subview];
+        if(imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;将该函数作为&lt;code&gt;UINavigationBar&lt;/code&gt;的扩展函数即可直接调用得到盖视图，然后在希望隐藏的地方将&lt;code&gt;hide&lt;/code&gt;属性值为&lt;code&gt;YES&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=""&gt;应用场景：&lt;/h2&gt;</description><link>http://localhost:2368/yin-cang-navigationbarxia-bian-xian-2/</link><guid isPermaLink="false">84809031-9470-47d5-9951-a3d3a82eb1d5</guid><dc:creator>ioneway</dc:creator><pubDate>Thu, 24 Mar 2016 03:22:21 GMT</pubDate><content:encoded>&lt;p&gt;有些app需要将NavigationBar的下边线隐藏，从而使得页面看起导航条和下面的页面融为一体。&lt;/p&gt;
+
+&lt;h2 id="view"&gt;寻找下边线View视图&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;- (UIImageView*)bottomLineView:(UIView*)view {
+
+    if([view isKindOfClass:UIImageView.class] &amp;amp;&amp;amp; view.bounds.size.height&amp;lt;=1.0) {
+        return(UIImageView*)view;
+    }
+    for(UIView*subview in view.subviews) {
+        UIImageView*imageView = [self bottomLineView:subview];
+        if(imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;将该函数作为&lt;code&gt;UINavigationBar&lt;/code&gt;的扩展函数即可直接调用得到盖视图，然后在希望隐藏的地方将&lt;code&gt;hide&lt;/code&gt;属性值为&lt;code&gt;YES&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=""&gt;应用场景：&lt;/h2&gt;
+
+&lt;p&gt;1，当页面视图是一个UIScrollView时，在正常状态下隐藏下边线，在用户向上滑动时候显示下边线。&lt;/p&gt;</content:encoded></item><item><title>Swift 最佳实践（一）</title><description>&lt;p&gt;Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。&lt;/p&gt;
+
+&lt;p&gt;最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：&lt;a href="http://pan.baidu.com/s/1nux5IaP"&gt;http://pan.baidu.com/s/1nux5IaP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在项目中学习到了一些Swift编写方法和要点。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如项目中的&lt;code&gt;CollapsableTableScene&lt;/code&gt;类在实现&lt;code&gt;CollapsableTableViewSectionHeaderInteractionProtocol&lt;/code&gt;协议的时候是这样写的：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {  
+//相关实现......
+}
+
+private fund indexPaths(...){  
+//私有方法实现
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2，当一个条件不满足就需要return结束函数，最好使用guard[条件取反] else { }&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如项目中：&lt;code&gt;CollapsableTableViewController&lt;/code&gt;的ViewDidLoad函数的实现：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;guard&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/swift-si-kao-yi/</link><guid isPermaLink="false">784723ee-9ce5-4d2d-a739-99df90748a09</guid><dc:creator>ioneway</dc:creator><pubDate>Wed, 23 Mar 2016 04:23:00 GMT</pubDate><content:encoded>&lt;p&gt;Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。&lt;/p&gt;
+
+&lt;p&gt;最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：&lt;a href="http://pan.baidu.com/s/1nux5IaP"&gt;http://pan.baidu.com/s/1nux5IaP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在项目中学习到了一些Swift编写方法和要点。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如项目中的&lt;code&gt;CollapsableTableScene&lt;/code&gt;类在实现&lt;code&gt;CollapsableTableViewSectionHeaderInteractionProtocol&lt;/code&gt;协议的时候是这样写的：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {  
+//相关实现......
+}
+
+private fund indexPaths(...){  
+//私有方法实现
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2，当一个条件不满足就需要return结束函数，最好使用guard[条件取反] else { }&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如项目中：&lt;code&gt;CollapsableTableViewController&lt;/code&gt;的ViewDidLoad函数的实现：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;guard let tableView = collapsableTableView() else {  
+            return
+        }
+//.....非空执行
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果不使用guard，那么就需要隐式解包：如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;       let tableView = collapsableTableView()
+        if tableView == nil{
+            return;
+        }
+//而之后使用tableView也需要解绑tableView!.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;      if let tableView = collapsableTableView()  {
+            //.....非空之行
+        }else{
+            return;
+        };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样的话代码结构就不再清晰,容易误导读者。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3，千万不要为一个声明为！的值，在其后添加？来调用它的实例函数。因为该值如果没有被赋值，在其后添加？调用方法则会忽略方法调用，而不会crash。导致bug难以查找。&lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt;声明为！的属性，如果没有在init方法中或者在声明的时候赋初始值，编译器不会报错也不会有警告。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如项目中：&lt;code&gt;MenuSectionHeader&lt;/code&gt;类中的&lt;code&gt;interactionDelegate&lt;/code&gt;声明为！值，但是又在touchesEnded方法中这样调用：&lt;code&gt;interactionDelegate?.userTappedView(self, atPoint: touch.locationInView(self)).&lt;/code&gt; 如果在interactionDelegate忘记被赋值，则userTappedView就会被忽略掉。程序bug就会比较难找。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我认为这是项目中Swift使用的一个缺陷。应当去除?. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;本人iOS菜鸟一个，正在不断学习中。&lt;/p&gt;
+
+&lt;p&gt;以上仅是个人想法，如有缺陷欢迎指正。&lt;/p&gt;
+
+&lt;p&gt;谢谢。&lt;/p&gt;</content:encoded></item><item><title>Swift 初始化器</title><description>&lt;p&gt;Swift初始化器有两种：指定初始化器&lt;code&gt;(Designated Initializer)&lt;/code&gt;和便利初始化器&lt;code&gt;(Convenience Initializer)&lt;/code&gt;. &lt;/p&gt;
+
+&lt;h4 id="designatedinitializer"&gt;指定初始化器&lt;designated initializer=""&gt;&lt;/designated&gt;&lt;/h4&gt;
+
+&lt;p&gt;指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的&lt;strong&gt;指定初始化器&lt;/strong&gt;去初始化它们各自引入的属性。&lt;u style="color:red"&gt;&lt;b&gt;类有且至少要有一个指定初始化器&lt;/b&gt;&lt;/u&gt;。&lt;/p&gt;
+
+&lt;h4 id="convenienceinitializer"&gt;便利初始化器&lt;convenience initializer=""&gt;&lt;/convenience&gt;&lt;/h4&gt;
+
+&lt;p&gt;便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。&lt;u style="color:red"&gt;&lt;b&gt;一个类可以没有便利初始化器&lt;/b&gt;&lt;/u&gt;。&lt;/p&gt;
+
+&lt;p&gt;初始化器之间的相互调用关系，必须遵守一下原则：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;指定初始化器必须调用其父类的指定初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;便利初始化器必须调用该类中另一个初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;便利初始化器最终必须调用一个指定初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/03/init__use.png" alt="init_use"&gt;&lt;/p&gt;</description><link>http://localhost:2368/swift-chu-shi-hua-qi/</link><guid isPermaLink="false">699af059-09ff-4996-9739-3e857d329570</guid><dc:creator>ioneway</dc:creator><pubDate>Tue, 15 Mar 2016 05:20:36 GMT</pubDate><content:encoded>&lt;p&gt;Swift初始化器有两种：指定初始化器&lt;code&gt;(Designated Initializer)&lt;/code&gt;和便利初始化器&lt;code&gt;(Convenience Initializer)&lt;/code&gt;. &lt;/p&gt;
+
+&lt;h4 id="designatedinitializer"&gt;指定初始化器&lt;designated initializer=""&gt;&lt;/designated&gt;&lt;/h4&gt;
+
+&lt;p&gt;指定初始化器是类的最主要的初始化器，它会将类中所有属性赋值初始化，并且一路往上调用父类的&lt;strong&gt;指定初始化器&lt;/strong&gt;去初始化它们各自引入的属性。&lt;u style="color:red"&gt;&lt;b&gt;类有且至少要有一个指定初始化器&lt;/b&gt;&lt;/u&gt;。&lt;/p&gt;
+
+&lt;h4 id="convenienceinitializer"&gt;便利初始化器&lt;convenience initializer=""&gt;&lt;/convenience&gt;&lt;/h4&gt;
+
+&lt;p&gt;便利初始化器就是方便开发者调用的初始化器，它必须调用同个类的指定初始化器，提供一些默认的参数给指定初始化器来生成一个默认的类的实例。&lt;u style="color:red"&gt;&lt;b&gt;一个类可以没有便利初始化器&lt;/b&gt;&lt;/u&gt;。&lt;/p&gt;
+
+&lt;p&gt;初始化器之间的相互调用关系，必须遵守一下原则：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;指定初始化器必须调用其父类的指定初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;便利初始化器必须调用该类中另一个初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b style="color:red"&gt;便利初始化器最终必须调用一个指定初始化器&lt;/b&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;简单说：就是指定初始化器必须在类的继承关系中一路向上调用，便利初始化器必须在该类中一路往指定初始化器调用。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/03/init__use.png" alt="init_use"&gt;&lt;/p&gt;</content:encoded></item><item><title>Swift 中Enums, Structs, Classes的理解</title><description>&lt;p&gt;原文地址：&lt;a href="https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift"&gt;https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;回想只使用OC语言进行开发的时候，&lt;code&gt;封装&lt;/code&gt;功能被限制在类中。然而，现在可以使用Swift进行开发，&lt;code&gt;enums&lt;/code&gt;, &lt;code&gt;structs&lt;/code&gt;和&lt;code&gt;classes&lt;/code&gt;同样也具有了封装的功能。&lt;/p&gt;
+
+&lt;p&gt;这些类型和&lt;code&gt;protocols&lt;/code&gt;结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。&lt;/p&gt;
+
+&lt;p&gt;本教程的目的是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;介绍一些enums,structs和classes的使用经验。&lt;/li&gt;
+&lt;li&gt;当你使用它们的时候，能帮你解决一些问题。&lt;/li&gt;
+&lt;li&gt;介绍他们是如何工作的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;概览&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Swift&lt;/strong&gt;最大的卖点是：&lt;code&gt;safety&lt;/code&gt;, &lt;code&gt;speed&lt;/code&gt;, &lt;code&gt;simplicity&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Safety&lt;/strong&gt;意味着你很难因为"不小心","不按常规","记忆不清"儿写出难以发现的bug。&lt;strong&gt;Swift&lt;/strong&gt;使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。&lt;/p&gt;
+
+&lt;p&gt;此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Swift&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/swift-zhong-enums-structs-classesde-li-jie/</link><guid isPermaLink="false">b6ebab49-d473-41ae-b67e-d9db177e9e93</guid><dc:creator>ioneway</dc:creator><pubDate>Thu, 10 Mar 2016 04:54:06 GMT</pubDate><content:encoded>&lt;p&gt;原文地址：&lt;a href="https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift"&gt;https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;回想只使用OC语言进行开发的时候，&lt;code&gt;封装&lt;/code&gt;功能被限制在类中。然而，现在可以使用Swift进行开发，&lt;code&gt;enums&lt;/code&gt;, &lt;code&gt;structs&lt;/code&gt;和&lt;code&gt;classes&lt;/code&gt;同样也具有了封装的功能。&lt;/p&gt;
+
+&lt;p&gt;这些类型和&lt;code&gt;protocols&lt;/code&gt;结合，会创造出令人惊奇的功能。他们有许多共同的功能，也有不少重要的区别。&lt;/p&gt;
+
+&lt;p&gt;本教程的目的是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;介绍一些enums,structs和classes的使用经验。&lt;/li&gt;
+&lt;li&gt;当你使用它们的时候，能帮你解决一些问题。&lt;/li&gt;
+&lt;li&gt;介绍他们是如何工作的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在读取本教程之前请确定你已经对Swift有了一些了解并具有一些面向对象的经验。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;概览&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Swift&lt;/strong&gt;最大的卖点是：&lt;code&gt;safety&lt;/code&gt;, &lt;code&gt;speed&lt;/code&gt;, &lt;code&gt;simplicity&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Safety&lt;/strong&gt;意味着你很难因为"不小心","不按常规","记忆不清"儿写出难以发现的bug。&lt;strong&gt;Swift&lt;/strong&gt;使你的开发工作更加安全，因为他会试图在编译阶段报告你的bug，而不是在运行时阶段挂掉你的app。&lt;/p&gt;
+
+&lt;p&gt;此外，Swift可以是你的代码更加干净明了并易于理解，优化器可以使应用运行的更快。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Swift&lt;/strong&gt;语言核心简单且高度正规化，它仅仅建立在很少量的几个核心概念之上。尽管它的规则相对简单，但是功能却十分强大。&lt;/p&gt;
+
+&lt;p&gt;使其简单且功能强大的重要原因是Swift的类型系统&lt;code&gt;type system&lt;/code&gt;
+&lt;img src="http://localhost:2368/content/images/2016/03/types-700x195.png" alt="types system"&gt;&lt;/p&gt;
+
+&lt;p&gt;Swift的类型系统十分强大，尽管它只有6种类型。它不像一些其它语言一样字面上拥有十多种类型，而Swift只有6种。&lt;/p&gt;
+
+&lt;p&gt;四种组合类型：protocol, enum, struct, class. 两种复合类型：tuple, function.&lt;/p&gt;
+
+&lt;p&gt;还有一些基础类型：Bool, Int, Uint, Float, Double, Character, String ,Array, Set, Dictionary, Optional, 等。然而，这些类型都来自标准库。&lt;/p&gt;
+
+&lt;p&gt;本教程以model types为基础的组合类型enum, struct和class为重点。&lt;/p&gt;
+
+&lt;h1 id=""&gt;开始&lt;/h1&gt;
+
+&lt;p&gt;创建一个playground项目并命名为&lt;strong&gt;Shapes&lt;/strong&gt;,选择平台为OS X.清除现有代码，并加入以下代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import Foundation  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用字符串虽然简单，但是也有一些重要的缺陷：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;容易出错。任何不属于颜色规格的字符串都会正常编译，但是在运行时报错。  &lt;/li&gt;
+&lt;li&gt;Autocomplete不能正确的帮助你检测颜色名称。  &lt;/li&gt;
+&lt;li&gt;当你传递一个颜色字符串参数时，它可能不能明确的表明这是一个代表颜色的字符串。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=""&gt;使用枚举来解决&lt;/h3&gt;
+
+&lt;p&gt;使用自定义类型来解决这些问题。如果你来自Cocoa Touch，你可能想实现一个封装的类像UIColor。而Swift提供给您更多的选择来定义您的模型。&lt;/p&gt;
+
+&lt;p&gt;在实现这个功能之前，先让我们想想如何实现颜色enum，你可能会想到用以下代码来实现：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enum ColorName {  
+  case Black
+  case Silver
+  case Gray
+  case White
+  case Maroon
+  case Red
+  // ... and so on ... 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上方式十分类似于C-style enums.然而，Swift允许你指定一个类型来表示每一个case。当然，被指定的类型必须遵守RawRepresentable协议。&lt;/p&gt;
+
+&lt;p&gt;所以你可以如下创建颜色枚举，并为每一个case赋值:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enum ColorName : String {  
+  case Black  = "Black"
+  case Silver = "Silver"
+  case Gray   = "Gray"
+  case White  = "White"
+  case Maroon = "Maroon"
+  case Red    = "Red"
+  // ... and so on ... 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Swift在使用字符串作为枚举值的时候有其特殊性。如果你没有制定case的值，那么编译器会自动为其赋值，值为case的名称。这意味着你可以像下面这样写：  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enum ColorName : String {  
+  case Black
+  case Silver
+  case Gray
+  case White
+  case Maroon
+  case Red
+  // ... and so on ... 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你可以通过只写一次&lt;code&gt;case&lt;/code&gt;并使用逗号来分割case来简化enum。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enum ColorName : String {  
+  case Black, Silver, Gray, White, Maroon, Red, Purple, Fuchsia, Green, Lime, Olive, Yellow, Navy, Blue, Teal, Aqua
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在你在对于使用字符串来表示颜色所遇到的问题就解决了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let fill = ColorName.Grey   // ERROR: Misspelled color names won't compile. Good!  
+let fill = ColorName.Gray   // Correct names autocomplete and compile. Yay!  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="associatedvalues"&gt;关联值(Associated Values)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;ColorName&lt;/strong&gt;是命名Color的model。但是如果你希望像CSS中的那样可以有多种表现形式：名称，RGB, HSL 等等。如何为他们建模呢？&lt;/p&gt;
+
+&lt;p&gt;Swift中Enum对于建模十分强大，可以表现各种东西，如：CSS颜色，并且这些enum case与他们的值相关联。这些值成为关联值&lt;code&gt;(Associated Values)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;使用enum来定义&lt;strong&gt;CSSColor&lt;/strong&gt;，向playground添加如下代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enum CSSColor {  
+  case Named(ColorName)
+  case RGB(UInt8, UInt8, UInt8)
+}
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>iOS 7 SDK: 多任务的改进</title><description>&lt;p&gt;原文地址：&lt;a href="http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295"&gt;http://code.tutsplus.com/tutorials/ios-7-sdk-multitasking-enhancements--mobile-20295&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;这篇教程向我们介绍iOS7 SDK中多任务的改进，具体来说，你将了解到Background Fetch, Remote Notifications, 和Background Transfer Service APIs。&lt;/p&gt;
 
@@ -1227,6 +1969,8 @@ var duoshuoQuery = {short_name:"abcbytr"};
 如图：
 &lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-41-14.png" alt="duoshuo_setting"&gt;
 
+&lt;br&gt;&lt;br&gt;
+
 **2，添加 CNZZ 统计**
 
 1， 注册[CNZZ](http://www.cnzz.com)  
@@ -1234,9 +1978,10 @@ var duoshuoQuery = {short_name:"abcbytr"};
 如图：
 &lt;img src="http://localhost:2368/content/images/2016/02/-----2016-02-14---12-54-11.png" alt="duoshuo_setting"&gt;
 
-3， 终端输入命令```npm start```开启服务  
-4， 浏览器输入[http://localhost:2368/ghost](http://localhost:2368/ghost)进入后台管理。  
-5. 点击左侧边栏：```插入代码```，将复制的代码粘贴在```页脚```框中，保存。
+
+3， 终端输入命令```npm start```开启服务&lt;br&gt;  
+4， 浏览器输入 [http://localhost:2368/ghost](http://localhost:2368/ghost)进入后台管理。&lt;br&gt;  
+5. 点击左侧边栏：```插入代码```，将复制的代码粘贴在```页脚```框中，保存。&lt;br&gt;&lt;br&gt;
 
 
 至此，你的博客就有了基本完整的功能了，你可以登录多说和[CNZZ](http://www.cnzz.com)管理你的站点。
@@ -1256,87 +2001,4 @@ var duoshuoQuery = {short_name:"abcbytr"};
 &lt;li&gt;点击进去，阅读文章，发现文章中图片不显示。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;对RSS丝毫不懂，有哪位网友可以解答一下。&lt;/p&gt;</content:encoded></item><item><title>欢迎使用 Ghost 博客系统</title><description>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
-
-&lt;h2 id=""&gt;快速入门&lt;/h2&gt;
-
-&lt;p&gt;Ghost 使用 Markdown 语法书写内容。简单来说，Markdown 就是一种简化的书写格式！&lt;/p&gt;
-
-&lt;p&gt;用 Markdown 语法写作是很容易的。在编辑界面的左侧就是你写作的地方。在你认为需要的时候，可以使用以下这些语法来格式化你的内容。例如下面这个无序列表：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Item number one&lt;/li&gt;
-&lt;li&gt;Item number two
-&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A final item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;还可以是有序列表：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Remember to buy some milk&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">9dddcac0-0676-4542-aa19-7d7902bd1962</guid><category>系统简介</category><dc:creator>ioneway</dc:creator><pubDate>Thu, 28 Jan 2016 16:36:59 GMT</pubDate><content:encoded>&lt;p&gt;Yeah，博客上线了！这篇文章的目的是向你介绍 Ghost 编辑器并帮你快速上手。通过 &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt; 链接就可以登录系统后台管理你的博客内容了。当你进入后台，你就能看到左侧文章列表处列出的这篇文章，右侧就是这篇文章的预览效果。点击预览栏右上角的铅笔图标就能进入内容编辑页面。 &lt;/p&gt;
-
-&lt;h2 id=""&gt;快速入门&lt;/h2&gt;
-
-&lt;p&gt;Ghost 使用 Markdown 语法书写内容。简单来说，Markdown 就是一种简化的书写格式！&lt;/p&gt;
-
-&lt;p&gt;用 Markdown 语法写作是很容易的。在编辑界面的左侧就是你写作的地方。在你认为需要的时候，可以使用以下这些语法来格式化你的内容。例如下面这个无序列表：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Item number one&lt;/li&gt;
-&lt;li&gt;Item number two
-&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A final item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;还可以是有序列表：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
-&lt;li&gt;Drink the milk  &lt;/li&gt;
-&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=""&gt;链接&lt;/h3&gt;
-
-&lt;p&gt;如果要链接其它页面，可以直接把页面的 URL 粘贴过来，例如 &lt;a href="http://www.ghostchina.com"&gt;http://www.ghostchina.com&lt;/a&gt; - 会被自动识别为链接。但是，如果你想自定义链接文本，可以像这样： &lt;a href="http://www.ghostchina.com"&gt;Ghost 中文网&lt;/a&gt;。很简单吧！&lt;/p&gt;
-
-&lt;h3 id=""&gt;图片&lt;/h3&gt;
-
-&lt;p&gt;插入图片也没问题！前提是你事先知道图片的 URL，然后像下面这样：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://static.ghostchina.com/image/3/fe/34a9831916be9db1381ecb320491e.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
-
-&lt;p&gt;如果图片在本地的硬盘里怎么办？也很简单！像下面这样书写就能为图片预留一个位置，然后你可以继续写作，回头再通过拖拽的方式把图片上传到服务器上。&lt;/p&gt;
-
-&lt;h3 id=""&gt;引用&lt;/h3&gt;
-
-&lt;p&gt;有些时候我们需要引用别人说的话，可以这样：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Wisdomous - it's definitely a word.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=""&gt;代码&lt;/h3&gt;
-
-&lt;p&gt;或许你是个码农，需要贴一些代码到文章里，可以通过两个引号（Tab 键上面的那个键）加入行内代码 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;。如果需要加入大段的代码，可以在代码前加 4 个空格缩进，这就是 Markdown 的语法。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.awesome-thing {
-    display: block;
-    width: 100%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=""&gt;分割线&lt;/h3&gt;
-
-&lt;p&gt;在任一新行输入 3 个或更多的短横线（减号）就是一条分隔线了。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=""&gt;高级用法&lt;/h3&gt;
-
-&lt;p&gt;Markdown 还有一个特别用法，就是在你需要的时候可以直接书写 HTML 代码。&lt;/p&gt;
-
-&lt;p&gt;&lt;input type="text" placeholder="这是个输入框！"&gt;&lt;/p&gt;
-
-&lt;p&gt;只要掌握了上面的这些介绍，你就已经入门了！继续写作吧！&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;对RSS丝毫不懂，有哪位网友可以解答一下。&lt;/p&gt;</content:encoded></item></channel></rss>

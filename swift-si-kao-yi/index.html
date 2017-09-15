@@ -1,0 +1,320 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Swift 最佳实践（一）</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 最佳实践（一）">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 最佳实践（一）">
+    <meta property="og:description" content="">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="../assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://localhost:2368/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/vno.css?v=af7aaa8cab">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tomorrow.css?v=af7aaa8cab">
+    
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="iOneWay Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift 最佳实践（一）">
+    <meta property="og:description" content="Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。 最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：http://pan.baidu.com/s/1nux5IaP 在项目中学习到了一些Swift编写方法和要点。   1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。 如项目中的CollapsableTableScene类在实现CollapsableTableViewSectionHeaderInteractionProtocol协议的时候是这样写的： extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {   //相关实现...... } private fund indexPaths(...){   //私有方法实现 } 类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。   2，当一个条件不满足就需要return结束函数，最好使用guard[...">
+    <meta property="og:url" content="http://localhost:2368/swift-si-kao-yi/">
+    <meta property="article:published_time" content="2016-03-23T04:23:00.245Z">
+    <meta property="article:modified_time" content="2016-03-23T05:38:40.718Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift 最佳实践（一）">
+    <meta name="twitter:description" content="Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。 最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：http://pan.baidu.com/s/1nux5IaP 在项目中学习到了一些Swift编写方法和要点。   1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。 如项目中的CollapsableTableScene类在实现CollapsableTableViewSectionHeaderInteractionProtocol协议的时候是这样写的： extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {   //相关实现...... } private fund indexPaths(...){   //私有方法实现 } 类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。   2，当一个条件不满足就需要return结束函数，最好使用guard[...">
+    <meta name="twitter:url" content="http://localhost:2368/swift-si-kao-yi/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "iOneWay Blog",
+    "author": {
+        "@type": "Person",
+        "name": "ioneway",
+        "image": "http://localhost:2368/content/images/2016/02/10000244754444-1.png",
+        "url": "http://localhost:2368/author/ioneway",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Swift 最佳实践（一）",
+    "url": "http://localhost:2368/swift-si-kao-yi/",
+    "datePublished": "2016-03-23T04:23:00.245Z",
+    "dateModified": "2016-03-23T05:38:40.718Z",
+    "description": "Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。 最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：http://pan.baidu.com/s/1nux5IaP 在项目中学习到了一些Swift编写方法和要点。   1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。 如项目中的CollapsableTableScene类在实现CollapsableTableViewSectionHeaderInteractionProtocol协议的时候是这样写的： extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {   //相关实现...... } private fund indexPaths(...){   //私有方法实现 } 类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。   2，当一个条件不满足就需要return结束函数，最好使用guard[..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="iOneWay Blog" href="../rss/index.html">
+
+</head>
+<body class="post-template">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="../" title="前往 iOneWay Blog 的主页"><img src="../content/images/2016/02/ioneway.png" width="80" alt="iOneWay Blog logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="../" title="前往 iOneWay Blog 的主页">iOneWay Blog</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">天道地道，自求我道</span>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">QQ:373850874. 欢迎加入。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="../index.html#blog" title="访问博客" class="blog-button">博客</a></li>
+          <!--    <li class="navigation__item"><a href="/#blog" target="_blank" title="我的项目">项目</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="了解更多关于我">关于</a></li>
+              <li class="navigation__item"><a href="/#blog"" title="邮件订阅本站">订阅</a></li> -->
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Weibo -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> -->
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/ioneway" title="@onevcat 的 Github" target="_blank">
+      <i class="social fa fa-github"></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+<!--  <li class="navigation__item">
+    <a href="" title="@onevcat" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li> -->
+  
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="../rss/index.rss" rel="author" title="RSS" target="_blank">
+      <i class="social fa fa-rss"></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:373850874@qq.com" title="邮件联系我">
+      <i class="social fa fa-envelope"></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="23 3月 2016" class="post-meta__date date">23 3月 2016</time> • <span class="post-meta__tags tags"></span>
+        <!--<span class="post-meta__author author"><img src="/content/images/2016/02/10000244754444-1.png" alt="profile image for ioneway" class="avatar post-meta__avatar" /> by ioneway</span>-->
+      </div>
+      <h1 class="post-title">Swift 最佳实践（一）</h1>
+    </header>
+
+    <section class="post">
+      <p>Swift已经问世有一段时间了，各种优秀的第三方库都陆续出现，以及学习网站都加大了对Swift的推广力度，就连一向傲慢的苹果也为推广Swift专门设立了一个Bolg。还有不少大神都发文看好Swift发展。所以为了适应未来，学习Swift迫在眉睫。</p>
+
+<p>最近看了一个swift项目：CollapsableTable-Swift-master，我已经找不到是从哪里下载的了，为了能够永久保存，不至于误删除，我copy了一份放在了我的百度云中，分享给大家：<a href="http://pan.baidu.com/s/1nux5IaP">http://pan.baidu.com/s/1nux5IaP</a></p>
+
+<p>在项目中学习到了一些Swift编写方法和要点。</p>
+
+<blockquote>
+  <p>1, 对于一个只申明了方法的protocol，class最好在extention中实现该协议，实现该协议时需要调用的私有方法最好也放在该extention中，这样会使得代码结构清晰。</p>
+</blockquote>
+
+<p>如项目中的<code>CollapsableTableScene</code>类在实现<code>CollapsableTableViewSectionHeaderInteractionProtocol</code>协议的时候是这样写的：</p>
+
+<pre><code>extension CollapsableTableViewController: CollapsableTableViewSectionHeaderInteractionProtocol {  
+//相关实现......
+}
+
+private fund indexPaths(...){  
+//私有方法实现
+}
+</code></pre>
+
+<p>类在实现对应协议的时候，将所有相关函数都放入了对应的extention中。</p>
+
+<blockquote>
+  <p>2，当一个条件不满足就需要return结束函数，最好使用guard[条件取反] else { }</p>
+</blockquote>
+
+<p>如项目中：<code>CollapsableTableViewController</code>的ViewDidLoad函数的实现：</p>
+
+<pre><code>guard let tableView = collapsableTableView() else {  
+            return
+        }
+//.....非空执行
+</code></pre>
+
+<p>如果不使用guard，那么就需要隐式解包：如下</p>
+
+<pre><code>       let tableView = collapsableTableView()
+        if tableView == nil{
+            return;
+        }
+//而之后使用tableView也需要解绑tableView!.
+</code></pre>
+
+<pre><code>      if let tableView = collapsableTableView()  {
+            //.....非空之行
+        }else{
+            return;
+        };
+</code></pre>
+
+<p>这样的话代码结构就不再清晰,容易误导读者。</p>
+
+<blockquote>
+  <p>3，千万不要为一个声明为！的值，在其后添加？来调用它的实例函数。因为该值如果没有被赋值，在其后添加？调用方法则会忽略方法调用，而不会crash。导致bug难以查找。</p>
+  
+  <p><strong>注意:</strong>声明为！的属性，如果没有在init方法中或者在声明的时候赋初始值，编译器不会报错也不会有警告。</p>
+</blockquote>
+
+<p>如项目中：<code>MenuSectionHeader</code>类中的<code>interactionDelegate</code>声明为！值，但是又在touchesEnded方法中这样调用：<code>interactionDelegate?.userTappedView(self, atPoint: touch.locationInView(self)).</code> 如果在interactionDelegate忘记被赋值，则userTappedView就会被忽略掉。程序bug就会比较难找。</p>
+
+<blockquote>
+  <p>我认为这是项目中Swift使用的一个缺陷。应当去除?. </p>
+</blockquote>
+
+<p>本人iOS菜鸟一个，正在不断学习中。</p>
+
+<p>以上仅是个人想法，如有缺陷欢迎指正。</p>
+
+<p>谢谢。</p>
+    </section>
+
+  </article>
+  
+  <div class="read-more">
+   <div class="read-more-item read-more-item-left">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../yin-cang-navigationbarxia-bian-xian-2/" title="link to 隐藏NavigationBar下边线">隐藏NavigationBar下边线</a></h2>
+       <p class="excerpt">有些app需要将NavigationBar的下边线隐藏，从而使得页面看起导航条和下面的页面融为一体。 寻找下边线View视图 - (UIImageView*)bottomLineView:(UIVie…</p>
+       <div class="post-list__meta"><time datetime="24 3月 2016" class="post-list__meta--date date">24 3月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../yin-cang-navigationbarxia-bian-xian-2/">继续阅读</a></div>
+   </div>
+   
+   <div class="read-more-item read-more-item-right">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="../swift-chu-shi-hua-qi/" title="link to Swift 初始化器">Swift 初始化器</a></h2>
+       <p class="excerpt">Swift初始化器有两种：指定初始化器(Designated Initializer)和便利初始化器(Convenience Initializer).  指定初始化器 指定初始化器是类的最主要的初始…</p>
+       <div class="post-list__meta"><time datetime="15 3月 2016" class="post-list__meta--date date">15 3月 2016</time> • <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href="../swift-chu-shi-hua-qi/">继续阅读</a></div>
+   </div>
+</div>
+  
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="15" data-title="Swift 最佳实践（一）" data-url="ioneway.github.io/swift-si-kao-yi/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ioneway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+            <footer class="footer">
+    <span class="footer__copyright">© 2017  All rights reserved.</span>
+    <span class="footer__copyright"><a href="https://github.com/onevcat/vno">Vno</a> theme by <a href="http://im.onevcat.com">@onevcat</a></span>
+</footer>        </div>
+    </div>
+
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257463674&amp;web_id=1257463674" language="JavaScript"></script>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: '你的 GitHub ID',
+  repo: '存储评论的 repo',
+  oauth: {
+    client_id: '你的 client ID',
+    client_secret: '你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></'+'script>');
+      }
+    </script>
+    
+    <script type="text/javascript" src="../assets/js/main.js?v=af7aaa8cab"></script>
+
+    <script type="text/javascript" src="../assets/js/highlight.pack.js?v=af7aaa8cab"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
